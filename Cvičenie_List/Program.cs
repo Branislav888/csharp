@@ -2,40 +2,27 @@
 {
     static void Main(string[] args)
     {
-
-
-
-        List<string> listname = new List<string>();
-
-
-        listname.Add("Branislav");
-        listname.Add("Alica");
-        listname.Add("Oliver");
-        listname.Add("Filip");
-        listname.Add("Lucka");
-        listname.Add("Sona");
+        List<string> listOfNames = new List<string>();
+        while (true)
         {
-            int counter = 0;
-
-            foreach (string name in listname)
+            Console.WriteLine("Napiš meno:");
+            var name = Console.ReadLine();
+            Console.Clear();
+            if (name == "Martin")
             {
-                Console.WriteLine(counter + name.ToUpper());
-                counter++;
+                break;
+            }
+            else
+            {
+                listOfNames.Add(name);
+            }
+
+            Console.WriteLine("List napisanich mien");
+            foreach (var item in listOfNames)
+            {
+                Console.WriteLine(item);
             }
         }
-        
 
-       foreach (string name in listname)
-        {
-            Console.WriteLine("Zadaj meno:");
-
-        }
-        
     }
-
-
-    
-
-
-}  
-  
+} 
