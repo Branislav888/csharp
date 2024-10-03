@@ -14,15 +14,13 @@
             }
             else
             {
-                listOfNames.Add(name);
+                  listOfNames.Add(name);
             }
-
             Console.WriteLine("List napisanich mien");
             foreach (var item in listOfNames)
             {
                 Console.WriteLine(item);
             }
         }
-
     }
 } 
