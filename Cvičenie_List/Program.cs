@@ -16,7 +16,7 @@
             {
                   listOfNames.Add(name);
             }
-            Console.WriteLine("List napisanich mien");
+            Console.WriteLine("List mien");
             foreach (var item in listOfNames)
             {
                 Console.WriteLine(item);
