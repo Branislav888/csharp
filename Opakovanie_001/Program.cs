@@ -79,7 +79,7 @@
         {
             Thread.Sleep(3000);
             Console.Clear();
-            Console.WriteLine("1.Vypis poloyiek");
+            Console.WriteLine("1.Vypis poloziek");
             Console.WriteLine("2. Pridanie polozky");
             Console.WriteLine("4. Exit");
             Console.WriteLine("Vyberte akciu:");
