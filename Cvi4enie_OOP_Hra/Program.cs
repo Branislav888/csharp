@@ -42,7 +42,7 @@ namespace Cvi4enie_OOP_Hra
                         {
                             Console.WriteLine("player nema manu nebola uzdravena.");
                         }
-
+                       
                     }
                     if (player2.HP <= 20)
                     {
@@ -57,7 +57,7 @@ namespace Cvi4enie_OOP_Hra
                         }
 
                     }
-                    player.RefilMana(10);
+               
                     Random random = new Random();
                     int randomNumber = random.Next(0, 100);
                     if (randomNumber <= 5)
@@ -65,8 +65,17 @@ namespace Cvi4enie_OOP_Hra
                         player.RefilMana(10);
                         Console.WriteLine("mana bola dobita");
                     }
-                                    
 
+                    {
+
+                        Random random1 = new Random();
+                        int Number = random1.Next(0, 100);
+                        if (Number <= 5)
+                        {
+                            player.RefilMana(10);
+                            Console.WriteLine("mana bola dobita");
+                        }
+                    }
 
                 }
         }
