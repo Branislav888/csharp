@@ -6,22 +6,33 @@ using System.Threading.Tasks;
 
 namespace MiestoAObec_cvicenie
 {
-    public class Obcan
+    public class Mesto
     {
-        public string obcan { get; set; }
-        public int vek { get; set; }
-      
-        public Obcan()
+        public string nazov;
+        public List<Obcan> Obcania;
+
+        public Mesto(string nazov) 
         {
-            List<Obcan> list = new List<Obcan>();
-            Obcan Peter = new Obcan(); vek = 30;
-            Obcan Jana = new Obcan(); vek = 45;
-            Obcan Sona = new Obcan(); vek = 19;
-            Obcan Alica = new Obcan(); vek = 37;
+          this.nazov = nazov;
+          Obcania = new List<Obcan>(); 
+
         }
 
-        
+        public void PridajObcana(Obcan obcan)
+        {
+            Obcania.Add(obcan);
+        }
 
-        
-    }
+        public void VypisObcanov()
+        {
+            Console.WriteLine("Ocania mesta" + nazov);
+            foreach (var obcan in Obcania)
+            {
+                obcan.VypisInfo();
+            }
+
+        }
+    }   
+
+    
 }
