@@ -20,5 +20,10 @@ namespace MiestoAObec_cvicenie
         {
             Console.WriteLine(" Meno: " + meno +" , Vek: " +  vek);
         }
+        public void VypisVek()
+        {
+            Console.WriteLine("Vek:" + vek);
+        }
+
     }
 }

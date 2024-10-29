@@ -10,12 +10,12 @@ namespace MiestoAObec_cvicenie
 
     namespace PovolanoeMenoMesto_cvicenie
     {
-        public class Povolanie
+        public class Povolania
         {
             public string Lekar { get; set; }
             public string Programator { get; set; }
 
-            public Povolanie(string Lekar, string Programator)
+            public Povolania(string Lekar, string Programator)
             {
                 this.Lekar = Lekar;
                 this.Programator = Lekar;
