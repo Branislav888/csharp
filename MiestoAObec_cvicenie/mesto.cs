@@ -5,34 +5,63 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MiestoAObec_cvicenie
+
+public class mesto
 {
-    public class Mesto
+    public string nazov;
+    public List<lekar> lekari = new List<lekar>();
+    public List<programator> programatori = new List<programator>();
+
+    public mesto(string nazov)
     {
-        public string nazov;
-        public List<Obcan> Obcania;
+        this.nazov = nazov;
+    }
 
-        public Mesto(string nazov) 
+    public void PridajLekara(Lekar lekar)
+    {
+        lekari.Add(lekar);
+    }
+
+    public void PridajProgramatora(Programator programator)
+    {
+        programatori.Add(programator);
+    }
+
+    public string nazov;
+    public List<Obcan> Obcania;
+
+    public Mesto(string nazov)
+    {
+        this.nazov = nazov;
+        Obcania = new List<Obcan>();
+
+    }
+
+    public void PridajObcana(Obcan obcan)
+    {
+        Obcania.Add(obcan);
+    }
+
+    public void VypisObcanov()
+    {
+        Console.WriteLine("Ocania mesta" + nazov + ":");
+        foreach (Lekar lekar in lekari)
         {
-          this.nazov = nazov;
-          Obcania = new List<Obcan>(); 
-
+            lekar.VypisInfo();
         }
 
-        public void PridajObcana(Obcan obcan)
+        foreach (Programator programator in programatori) ;
         {
-            Obcania.Add(obcan);
+            programator.VypisInfo();
         }
 
-        public void VypisObcanov()
-        {
-            Console.WriteLine("Ocania mesta" + nazov);
-            foreach (var obcan in Obcania)
-            {
-                obcan.VypisInfo();
-            }
+     
 
-        }
-    }   
-
-    
+    }
+   
 }
+
+
+
+
+
