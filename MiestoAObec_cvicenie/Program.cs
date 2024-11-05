@@ -6,11 +6,22 @@ namespace MiestoAObec_cvicenie
 {
     public class Program
     {
-        mesto bratislava = new mesto(nazov: "Bratislava");
-       Lekar lek = new Lekar (meno: "Igor" , vek: 34);
-       Programator prog = new Programator (meno: "Igor", vek: 28, programoaciJazyk: "C#");
-        SeniorProgramator1 senProg = new SeniorProgramator1(meno: "Martin", vek: 25, pocetProjektov: 25, programoaciJazyk: "Java");
+        static void Main(string[] args)
+        {
+            mesto bratislava = new mesto("bratislava");
 
-        
+            for (int i = 0; i < 31; i++) 
+            {
+                Obcan o = GeneratorObcanov.GenerujObcana();
+                bratislava.PridajObcana(o);
+            }
+            for (int i = 0;i < 31;i++)
+            {
+                Programator programator = GeneratorObcanov.GenerujProgramatora();
+                bratislava.PridajObcana(programator);
+            }     
+            bratislava.VypisObcana();
+
+        }
     }
 }

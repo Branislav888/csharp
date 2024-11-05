@@ -10,7 +10,7 @@ namespace MiestoAObec_cvicenie
     {
         public int pocetProjektov;
         public SeniorProgramator1(string meno, int vek, string programoaciJazyk, string seniorProgramator, int pocetProjektov) :
-            base (meno, vek, programoaciJazyk, seniorProgramator)
+            base (meno, vek, programoaciJazyk)
         {
           this.pocetProjektov = pocetProjektov;
         }

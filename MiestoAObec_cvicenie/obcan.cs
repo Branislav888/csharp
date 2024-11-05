@@ -15,15 +15,11 @@ namespace MiestoAObec_cvicenie
         {
             this.meno = meno;
             this.vek = vek;
-        }   
-        public void VypisInfo()
+        }
+
+        public virtual void VypisInfo()
         {
             Console.WriteLine(" Meno: " + meno +" , Vek: " +  vek);
         }
-        public void VypisVek()
-        {
-            Console.WriteLine("Vek:" + vek);
-        }
-
     }
 }

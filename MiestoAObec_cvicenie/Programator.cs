@@ -9,11 +9,11 @@ namespace MiestoAObec_cvicenie
     public class Programator : Obcan
     {
         public string programovaciJazyk;
-        public Programator (string meno, int vek, string programoaciJazyk, string seniorProgramator) : base (meno, vek) 
+        public Programator (string meno, int vek, string programoaciJazyk) : base (meno, vek) 
         {
             this.programovaciJazyk = programoaciJazyk;
         }
-            public new void VypisInfo()
+            public override void VypisInfo()
             {
                 Console.WriteLine(meno + " , " + vek +
                                   " rokov, pise kod v jazyku: " + programovaciJazyk);
