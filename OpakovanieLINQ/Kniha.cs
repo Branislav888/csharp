@@ -11,6 +11,7 @@ namespace OpakovanieLINQ
         public string Autor { get; set; }
         public int rokVydania { get; set; }
         public bool PreDospelych { get; set; }
+       
 
     }
 }
