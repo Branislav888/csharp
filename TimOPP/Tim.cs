@@ -7,30 +7,22 @@ using System.Threading.Tasks;
 
 namespace TimOPP
 {
-    public class Tim
+    class Tim
     {
-        private int PocetT;
-        private string nazov;
+        public string Nazov { get; private set; } 
+        public static int PocetTimov { get; private set; }
 
-        public Tim()
-        { 
-        } 
+        
+        public Tim(string nazov)
+        {
+            Nazov = nazov;
+            PocetTimov++; 
+        }
 
-        public Tim (int PocetT,  string nazov)
+       
+        public static int ZiskajPocetTimov()
         {
-            this.PocetT = PocetT;
-            this.nazov = nazov;
+            return PocetTimov;
         }
-        public int PocetT
-        {
-            get { return PocetT; }
-            set { PocetT = value; }
-        }
-        public string nazov
-        {
-            get { return nazov; }
-            set { nazov = value; }
-        }
-    }      
-    
+    }
 }

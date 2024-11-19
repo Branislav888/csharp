@@ -8,14 +8,29 @@ namespace MiestoAObec_cvicenie
 {
     public class Obcan
     {
-        public string meno;
-        public int vek;
+        protected string meno;
+        protected int vek;
+
+       
 
         public Obcan (string meno, int vek)
         {
             this.meno = meno;
             this.vek = vek;
         }
+
+        public string Meno
+        {
+            get { return meno; }
+            set { meno = value; }
+
+        }
+        public int Vek
+        {
+            get { return vek; }
+            set { vek = value; }
+        }
+
 
         public virtual void VypisInfo()
         {

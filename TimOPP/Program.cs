@@ -1,16 +1,13 @@
 ﻿namespace TimOPP
 {
-    internal class Program
+    private static void Main (string[] args)
     {
-        static void Main(string[] args)
-        {
-            Tim tim = new Tim();
+        
+        Tim tim1 = new Tim("Tím 1");
+        Tim tim2 = new Tim("Tím 2");
+        Tim tim3 = new Tim("Tím 3");
 
-            tim.PocetT = (5);
-            tim.nazov = "ziaci";
-
-            Console.WriteLine("Pocet:" + tim.PocetT);
-            Console.WriteLine("Nazov:" + tim.nazov);
-        }
+       
+        Console.WriteLine($"Celkový počet vytvorených tímov: {Tim.ZiskajPocetTimov()}");
     }
 }
