@@ -39,7 +39,6 @@
                         Console.WriteLine($"{kniha.Autor.ToUpper()} {kniha.rokVydania}");
                     }
                 }
-
             }
         }
     }
