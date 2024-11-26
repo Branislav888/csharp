@@ -8,15 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="studenti.csv" />
-    <None Remove="studenti_large.csv" />
-    <None Remove="studenti_large_chyba.csv" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Page Include="studenti.csv" />
-    <Page Include="studenti_large.csv" />
-    <Page Include="studenti_large_chyba.csv" />
+    <None Update="studenti.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="studenti_large.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="studenti_large_chyba.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
