@@ -16,7 +16,7 @@ namespace MiestoAObec_cvicenie
             public override void VypisInfo()
             {
                 Console.WriteLine(meno + " , " + vek +
-                                  " rokov, pise kod v jazyku: " + programovaciJazyk);
+                                  " rokov, pise kod v jazyku: " + programovaciJazyk + " Stav: " + stav);
             }
         
     }

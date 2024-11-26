@@ -16,7 +16,7 @@ namespace MiestoAObec_cvicenie
         }
        public new void VypisInfo()
         {
-            Console.WriteLine(Meno + " , " + " programuje v:" + programovaciJazyk + " a ma " + pocetProjektov + "projektov");
+            Console.WriteLine(Meno + " , " + " programuje v:" + programovaciJazyk + " a ma " + pocetProjektov + "projektov" + " Stav: " + stav);
         }
     }
 }

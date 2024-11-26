@@ -11,7 +11,7 @@ namespace MiestoAObec_cvicenie
         public Lekar (string meno, int vek) : base (meno, vek) { }
         public new void VypisInfo()
         {
-            Console.WriteLine(meno + " , " + vek + " rokov, lieci ludi");
+            Console.WriteLine(meno + " , " + vek + " rokov, lieci ludi" + " Stav: " + stav);
         }
     }
 }

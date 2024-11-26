@@ -17,6 +17,10 @@ namespace MiestoAObec_cvicenie
             string meno = mena[pozicia];
             int vek = random.Next(15, 116);
             Obcan obcan = new Obcan(meno, vek);
+            int dlzkaEnum = Enum.GetValues<StavObcana>().Length;
+            int nahodnyIndex = random.Next(dlzkaEnum);
+            obcan.Stav = (StavObcana)nahodnyIndex;
+            //obcan.Stav = StavObcana.Cudzinci
             return obcan;
         }
 
