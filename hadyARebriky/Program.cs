@@ -25,6 +25,17 @@
             Console.WriteLine("                          AAA           AAA");
             Console.WriteLine("                         AAA             AAA");
             Console.WriteLine();
+            Console.WriteLine("RRRRRRRR      EEEEEEEEE   BBBBBBBB     RRRRRRRR     IIIIIIII  KKK      KKK   YYYY         YYY");
+            Console.WriteLine("RRR    RRR    EEE         BBB    BBB   RRR    RRR     III     KKK    KKK      YYY        YYY");
+            Console.WriteLine("RRR     RRR   EEE         BBB     BBB  RRR     RRR    III     KKK  KKK         YYY      YYY");
+            Console.WriteLine("RRR     RRR   EEE         BBB    BBB   RRR     RRR    III     KKK KKK           YYY    YYY");
+            Console.WriteLine("RRR    RRR    EEEEEEE     BBBBBBB      RRR    RRR     III     KKKKKK             YYY  YYY");
+            Console.WriteLine("RRR RRRR      EEE         BBB    BBB   RRR RRRR       III     KKK KKK             YYYYY");
+            Console.WriteLine("RRR   RRR     EEE         BBB     BBB  RRR   RRR      III     KKK  KKK             YYY");
+            Console.WriteLine("RRR    RRR    EEE         BBB    BBB   RRR    RRR     III     KKK   KKK            YYY");
+            Console.WriteLine("RRR     RRR   EEEEEEEEE   BBBBBBBB     RRR     RRR  IIIIIIII  KKK     KKK          YYY");
+            Console.WriteLine();
+            Console.WriteLine();
             Console.ResetColor();
             Console.ReadKey();
             Console.Clear();
