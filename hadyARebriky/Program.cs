@@ -101,8 +101,7 @@ namespace hadyARebriky
 
                         {
 
-                            Kocka kocka = new Kocka();
-
+                            Kocka kocka = new Kocka();  
 
                             Hrac1 hrac1 = new Hrac1("Hráč 1");
                             Hrac2 hrac2 = new Hrac2("Hráč 2");

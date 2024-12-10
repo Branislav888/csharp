@@ -25,6 +25,20 @@ namespace hadyARebriky
             Skore += hod;
             return hod;
         }
+
+        public int Rebrik()
+        {
+            int posun = Rebrik.Posun();
+            Skore += hod;
+            return hod;
+        }
+
+        public int Hady()
+        {
+            int hod = .Hod();
+            Skore += hod;
+            return hod;
+        }
     }
 
 }
