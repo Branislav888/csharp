@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace MiestoAObec_cvicenie
@@ -31,5 +32,23 @@ namespace MiestoAObec_cvicenie
                 obcan.VypisInfo();
             }
         }
+        public void UlozDoSuboru(string nazovSuboru)
+        {
+            string json = JsonSerializer.Serialize(this);
+            File.WriteAllText(nazovSuboru, json);
+            Console.WriteLine("Data boli ulozene");
+        }
+        public static mesto NacitajZoSuboru(string nazovSuboru)
+        {
+            if (File.Exists(nazovSuboru))
+            {
+                string json = File.ReadAllText(nazovSuboru);
+                mesto mesto = JsonSerializer.Deserialize<mesto>(json);
+                return mesto;
+            }
+            return null;
+
+        }
+
     }
 }

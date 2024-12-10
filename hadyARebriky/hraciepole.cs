@@ -1,9 +1,12 @@
 ﻿using System;
-using System.Drawing;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Program
+namespace hadyARebriky
 {
-    static class hraciepole
+    static class pole
     {
         static char[,] gameBoard = new char[6, 6];
 
@@ -35,16 +38,13 @@ class Program
             for (int i = 0; i < 6; i++)
             {
                 Console.Write("| ");
-                
                 for (int j = 0; j < 6; j++)
                 {
                     Console.Write(gameBoard[i, j] + " | ");
-                    
                 }
                 Console.WriteLine();
                 Console.WriteLine("--------------------------");
             }
         }
     }
-
 }

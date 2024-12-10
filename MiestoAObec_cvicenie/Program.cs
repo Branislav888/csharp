@@ -8,18 +8,27 @@ namespace MiestoAObec_cvicenie
     {
         static void Main(string[] args)
         {
-            mesto bratislava = new mesto("bratislava");
+            mesto mesto = mesto.NacitajZoSuboru("mesto.json");
+            if (bratislava == null)
+            {
 
-            for (int i = 0; i < 31; i++) 
-            {
-                Obcan o = GeneratorObcanov.GenerujObcana();
-                bratislava.PridajObcana(o);
+
+
+                mesto bratislava = new mesto("bratislava");
+
+                for (int i = 0; i < 31; i++)
+                {
+                    Obcan o = GeneratorObcanov.GenerujObcana();
+                    bratislava.PridajObcana(o);
+                }
+                for (int i = 0; i < 31; i++)
+                {
+                    Programator programator = GeneratorObcanov.GenerujProgramatora();
+                    bratislava.PridajObcana(programator);
+                }
+                string subor = "mesto.json";
+                bratislava.UlozDoSuboru(subor);
             }
-            for (int i = 0;i < 31;i++)
-            {
-                Programator programator = GeneratorObcanov.GenerujProgramatora();
-                bratislava.PridajObcana(programator);
-            }     
             bratislava.VypisObcana();
 
         }

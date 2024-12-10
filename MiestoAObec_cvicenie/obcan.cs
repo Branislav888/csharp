@@ -17,9 +17,9 @@ namespace MiestoAObec_cvicenie
             get { return stav; }
             set { stav = value; }
         }
-       
 
-        public Obcan (string meno, int vek)
+
+        public Obcan(string meno, int vek)
         {
             this.meno = meno;
             this.vek = vek;
@@ -37,6 +37,8 @@ namespace MiestoAObec_cvicenie
             set { vek = value; }
         }
 
+        public Obcan 
+        
 
         public virtual void VypisInfo()
         {
