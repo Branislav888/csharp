@@ -19,11 +19,11 @@ namespace hadyARebriky
         }
 
 
-        public int HodKockou(Kocka kocka)
+        public int (Kocka kocka)
         {
-            int hod = kocka.Hod();
-            Skore += hod;
-            return hod;
+            Random random = new Random();
+            int cislo = random.Next(1, 7);
+           
         }
 
        
