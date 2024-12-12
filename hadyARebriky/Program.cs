@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Security.Cryptography;
 using System.Threading;
 
 namespace hadyARebriky
@@ -66,8 +67,16 @@ namespace hadyARebriky
                 switch (choice)
                 {
                     case "1":
-                        Console.WriteLine("Tato hra bola vytvorena Branislavom Sventekom a Alicou Laštíkovou" +
-                            "z 1.AI skupiny Appslab");
+                        Console.WriteLine("Možno sa pýtate. Kto je za touto hrou? Radi by sme sa vám prestavili a povedali par veci o nás");
+                        Thread.Sleep(1000);
+                        Console.WriteLine("Volám sa Branislav Sventek. Narodil som sa v Čadci presnejšie na Horelici, kde do teraz žijem.");
+                        Console.WriteLine(" Mam rad hudbu asi najviac obľúbený žáner R&B. Rad pozerám filmy každého druhu a najradšej trávim čas s ľuďmi, ktorých mam rád. ");
+                        Console.WriteLine("Teraz som študentom na SPŠ IT v Kysuci.");
+                        Thread.Sleep(3500);
+                        Console.WriteLine("Volám sa Alica Laštíková bývam v tepličke nad Váhom 15 rokov vo voľnom čase rada pozerám seriály z rôznou tematikov napríklad akčné darama anime sci-fi atd.");
+                        Console.WriteLine(" Milujem mačičky milujem v baví má dizajn a architektúra ale nechcem sa tomu venovať možno uvidím rada trávím čas a so svojimi kamarátmi.");
+                        Thread.Sleep(3500);
+                        Console.WriteLine("Tento projekt nám dal veľa námahy a úsilia tak hádam sa vám bude páčiť");
                         Thread.Sleep(1000);
                         break;
 
@@ -104,13 +113,14 @@ namespace hadyARebriky
                             Kocka kocka = new Kocka();  
 
                             Hrac1 hrac1 = new Hrac1("Hráč 1");
-                            Hrac2 hrac2 = new Hrac2("Hráč 2");
-                            
+                            Hrac1 hrac2 = new Hrac1("Hráč 2");
+                            Hady hady = new Hady();
+                            Rebriky rebrik = new Rebriky();
 
                             Console.WriteLine("Hráč 1 hodí kockou:");
                             int hod1 = hrac1.HodKockou(kocka);
                             Console.WriteLine($"{hrac1.Meno} hodil: {hod1} (Skóre: {hrac1.Skore})");
-                            
+
 
                             Console.WriteLine("Hráč 2 hodí kockou:");
                             int hod2 = hrac2.HodKockou(kocka);

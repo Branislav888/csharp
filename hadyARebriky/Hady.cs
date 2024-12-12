@@ -9,7 +9,7 @@ namespace hadyARebriky
     public class Hady
     {
         Random random = new Random();
-        public int Hady()
+        public int Had()
         {
             int number = random.Next(2, 5);
             Console.WriteLine($"Ideš o  : {number} polička nižšie");
