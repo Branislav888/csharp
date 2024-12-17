@@ -6,14 +6,27 @@ using System.Threading.Tasks;
 
 namespace hadyARebriky
 {
-    public class Hady
-    {
-        Random random = new Random();
-        public int Had()
-        {
-            int number = random.Next(2, 5);
-            Console.WriteLine($"Ideš o  : {number} polička nižšie");
-        }
+    
+       public class Had
+       {
+            public int Start { get; set; }
+            public int End { get; set; }
 
-    }
+            public Had(int start, int end)
+            {
+                Start = start;
+                End = end;
+            }
+
+            public int Skontroluj(int pozicia)
+            {
+                if (pozicia == Start)
+                {
+                    Console.WriteLine($"Oh nie odišiel si z polička {Start} na {End} kvôli hadovi!");
+                    return End;
+                }
+                return pozicia;
+            }
+        }
+    
 }

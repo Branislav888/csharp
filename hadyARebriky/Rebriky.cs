@@ -6,14 +6,26 @@ using System.Threading.Tasks;
 
 namespace hadyARebriky
 {
-    public class Rebriky
+    public class Rebrik
     {
-        Random random = new Random();
-        public int Rebrik()
+        public int Start { get; set; }
+        public int End { get; set; }
+
+        public Rebrik(int start, int end)
         {
-            int number = random.Next(2,5);
-            Console.WriteLine($"Pusunieš sa o : {number} polička");
+            Start = start;
+            End = end;
         }
 
+        public int Skontroluj(int pozicia)
+        {
+            if (pozicia == Start)
+            {
+                Console.WriteLine($"Super prešiel si z polička {Start} na {End} pomocou rebríku");
+                return End;
+            }
+            return pozicia;
+
+        }
     }
 }

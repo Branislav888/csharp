@@ -12,17 +12,16 @@ namespace hadyARebriky
         public int Skore { get; set; }
 
 
-        public Hrac1(string meno)
+        public Hrac1(string meno, int skore)
         {
-            Meno = meno;
-            Skore = 0;
+            meno = meno;
+            skore = 0;
         }
 
 
-        public int (Kocka kocka)
+        public void pohyb (int kocka)
         {
-            Random random = new Random();
-            int cislo = random.Next(1, 7);
+            
            
         }
 
