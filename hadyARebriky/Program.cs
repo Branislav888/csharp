@@ -8,7 +8,12 @@ namespace hadyARebriky
     {
         static void Main(string[] args)
         {
-            
+            List<Had> list = new List<Had>(); // list hadikov, list rebrikov, aspon 5 hadkov a rebrikov
+
+
+
+
+
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("     HHH       HHH           AAA           DDDDDDDD      YYYY         YYY");
             Console.WriteLine("     HHH       HHH          AAAAA          DDD    DDD     YYY        YYY");
@@ -71,12 +76,13 @@ namespace hadyARebriky
                         Thread.Sleep(1000);
                         Console.WriteLine("Volám sa Branislav Sventek. Narodil som sa v Čadci presnejšie na Horelici, kde do teraz žijem.");
                         Console.WriteLine(" Mam rad hudbu asi najviac obľúbený žáner R&B. Rad pozerám filmy každého druhu a najradšej trávim čas s ľuďmi, ktorých mam rád. ");
-                        Console.WriteLine("Teraz som študentom na SPŠ IT v Kysuci.");
                         Thread.Sleep(3500);
                         Console.WriteLine("Volám sa Alica Laštíková bývam v tepličke nad Váhom 15 rokov vo voľnom čase rada pozerám seriály z rôznou tematikov napríklad akčné darama anime sci-fi atd.");
-                        Console.WriteLine(" Milujem mačičky milujem v baví má dizajn a architektúra ale nechcem sa tomu venovať možno uvidím rada trávím čas a so svojimi kamarátmi.");
+                        Console.WriteLine(" Milujem mačičky milujem a baví má dizajn a architektúra ale nechcem sa tomu venovať možno uvidím rada trávím čas a so svojimi kamarátmi.");
                         Thread.Sleep(3500);
-                        Console.WriteLine("Tento projekt nám dal veľa námahy a úsilia ale hlavne vela skúsenosti tak hádam sa vám bude páčiť");
+                        Console.WriteLine("Teraz sme žiaci na SPŠ IT v KNM.");
+                        Thread.Sleep(500);
+                        Console.WriteLine("Tento projekt nám dal veľa námahy a úsilia ale hlavne vela skúsenosti tak hádam sa vám bude páčiť :)");
                         Thread.Sleep(1000);
                         break;
 
@@ -109,24 +115,20 @@ namespace hadyARebriky
                     case "4":
 
                         {
+                            Kocka kocka = new Kocka();
+                            Hrac hrac1 = new Hrac("Hráč 1");
+                            Hrac hrac2 = new Hrac("Hráč 2"); // hod kockou, prepocitat poziciu hraca, ci sa hrac nachadza pod hadikom a rebrikom (pomocou LINQ pozerame sa na hodnotu start pomocou listu) )
+                            // prepocitat hodnotu ak sa nachadza
+                            // PREPOCITAT PO KAZDOM HODE CI HRAC NEVYHRAL
 
-                            Kocka kocka = new Kocka();  
-
-                            Hrac1 hrac1 = new Hrac1("Hráč 1");
-                            Hrac1 hrac2 = new Hrac1("Hráč 2");
-                            Had had = new Had();
-                            Rebrik rebrik = new Rebrik();
 
                             Console.WriteLine("Hráč 1 hodí kockou:");
-                            int hod1 = hrac1.HodKockou(kocka);
-                            Console.WriteLine($"{hrac1.Meno} hodil: {hod1} (Skóre: {hrac1.Skore})");
-
+                            int hod1 = hrac1.hodKocky(kocka);
+                            Console.WriteLine($"{hrac1.Meno} hodil: {hod1} (Skóre: {hrac1.Pozicia})");
 
                             Console.WriteLine("Hráč 2 hodí kockou:");
-                            int hod2 = hrac2.HodKockou(kocka);
-                            Console.WriteLine($"{hrac2.Meno} hodil: {hod2} (Skóre: {hrac2.Skore})");
-
-                            
+                            int hod2 = hrac2.hodKocky(kocka);
+                            Console.WriteLine($"{hrac2.Meno} hodil: {hod2} (Skóre: {hrac2.Pozicia})");
                         }
                         break;
 

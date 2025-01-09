@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace hadyARebriky
 {
-    public class Hrac1
+    public class Hrac
     {
         public string Meno { get; set; }
         public int Pozicia { get; set; }
 
 
-        public Hrac1(string meno, int pozicia)
+        public Hrac(string meno)
         {
             meno = meno;
-            pozicia = 0;
+            Pozicia = 0;
         }
 
 
@@ -24,8 +24,11 @@ namespace hadyARebriky
             
            
         }
+        public int hodKocky(Kocka kocka)
+        {
+            throw new NotImplementedException();
+        }
 
-       
     }
 
 }
