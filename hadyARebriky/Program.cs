@@ -76,7 +76,7 @@ namespace hadyARebriky
                         Console.WriteLine("Volám sa Alica Laštíková bývam v tepličke nad Váhom 15 rokov vo voľnom čase rada pozerám seriály z rôznou tematikov napríklad akčné darama anime sci-fi atd.");
                         Console.WriteLine(" Milujem mačičky milujem v baví má dizajn a architektúra ale nechcem sa tomu venovať možno uvidím rada trávím čas a so svojimi kamarátmi.");
                         Thread.Sleep(3500);
-                        Console.WriteLine("Tento projekt nám dal veľa námahy a úsilia tak hádam sa vám bude páčiť");
+                        Console.WriteLine("Tento projekt nám dal veľa námahy a úsilia ale hlavne vela skúsenosti tak hádam sa vám bude páčiť");
                         Thread.Sleep(1000);
                         break;
 
@@ -114,8 +114,8 @@ namespace hadyARebriky
 
                             Hrac1 hrac1 = new Hrac1("Hráč 1");
                             Hrac1 hrac2 = new Hrac1("Hráč 2");
-                            Hady hady = new Hady();
-                            Rebriky rebrik = new Rebriky();
+                            Had had = new Had();
+                            Rebrik rebrik = new Rebrik();
 
                             Console.WriteLine("Hráč 1 hodí kockou:");
                             int hod1 = hrac1.HodKockou(kocka);

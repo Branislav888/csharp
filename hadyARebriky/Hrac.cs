@@ -9,13 +9,13 @@ namespace hadyARebriky
     public class Hrac1
     {
         public string Meno { get; set; }
-        public int Skore { get; set; }
+        public int Pozicia { get; set; }
 
 
-        public Hrac1(string meno, int skore)
+        public Hrac1(string meno, int pozicia)
         {
             meno = meno;
-            skore = 0;
+            pozicia = 0;
         }
 
 

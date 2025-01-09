@@ -9,8 +9,8 @@ namespace hadyARebriky
     
        public class Had
        {
-            public int Start { get; set; }
-            public int End { get; set; }
+            public int Start { get; set; } // zaciatocna pozicia napr. 20
+            public int End { get; set; } // konecna pozicia napr. 12
 
             public Had(int start, int end)
             {

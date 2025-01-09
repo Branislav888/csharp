@@ -8,8 +8,8 @@ namespace hadyARebriky
 {
     public class Rebrik
     {
-        public int Start { get; set; }
-        public int End { get; set; }
+        public int Start { get; set; } // zaciatocna pozicia napr. 10
+        public int End { get; set; }  // koncova pozicia napr. 15
 
         public Rebrik(int start, int end)
         {
