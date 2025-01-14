@@ -17,11 +17,11 @@ namespace hadyARebriky
             End = end;
         }
 
-        public int Skontroluj(int pozicia)
+        public int Skontroluj (int pozicia)
         {
             if (pozicia == Start)
             {
-                Console.WriteLine($"Super prešiel si z polička {Start} na {End} pomocou rebríku");
+                Console.WriteLine ($"Super prešiel si z polička {Start} na {End} pomocou rebríku");
                 return End;
             }
             return pozicia;

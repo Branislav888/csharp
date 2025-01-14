@@ -10,24 +10,23 @@ namespace hadyARebriky
     {
         public string Meno { get; set; }
         public int Pozicia { get; set; }
+        public Kocka Kocka { get; set; }
 
 
         public Hrac(string meno)
         {
-            meno = meno;
+            meno = Meno;
             Pozicia = 0;
         }
 
 
-        public void pohyb (int kocka)
+        public void Pohyb (int hodnotaKocky)
         {
-            
-           
+            int hod = Kocka.Hod(); 
+            Pozicia += hod;       
+            Console.WriteLine($"{Meno} je teraz na pozícii: {Pozicia}");
         }
-        public int hodKocky(Kocka kocka)
-        {
-            throw new NotImplementedException();
-        }
+        
 
     }
 

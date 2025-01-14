@@ -15,11 +15,11 @@ namespace hadyARebriky
             while (true)
             {
 
-                int number = random.Next(1, 7);
-                Console.WriteLine($"Hodené číslo: {number}");
+                int kocka = random.Next(1, 7);
+                Console.WriteLine($"Hodené číslo: {kocka}");
 
 
-                if (number == 1)
+                if (kocka == 1)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("  +---------+");
@@ -31,7 +31,7 @@ namespace hadyARebriky
                     Console.WriteLine("+---------+");
                 }
 
-                if (number == 2)
+                if (kocka == 2)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("  +---------+");
@@ -43,7 +43,7 @@ namespace hadyARebriky
                     Console.WriteLine("+---------+");
                 }
 
-                if (number == 3)
+                if (kocka == 3)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("  +---------+       ");
@@ -55,7 +55,7 @@ namespace hadyARebriky
                     Console.WriteLine("+---------+");
                 }
 
-                if (number == 4)
+                if (kocka == 4)
                 {
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.WriteLine("  +---------+");
@@ -68,7 +68,7 @@ namespace hadyARebriky
 
                 }
 
-                if (number == 5)
+                if (kocka == 5)
                 {
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine("  +---------+");
@@ -80,7 +80,7 @@ namespace hadyARebriky
                     Console.WriteLine("+---------+");
                 }
 
-                if (number == 6)
+                if (kocka == 6)
                 {
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.WriteLine("  +---------+");

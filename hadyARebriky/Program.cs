@@ -8,42 +8,41 @@ namespace hadyARebriky
     {
         static void Main(string[] args)
         {
-            List<Had> list = new List<Had>(); // list hadikov, list rebrikov, aspon 5 hadkov a rebrikov
+            List<Had> hadi = new List<Had>
+               {
+                new Had(17, 7),
+                new Had(54, 34),
+                new Had(42, 19),
+                new Had(35, 24),
+                new Had(10, 4),
+                new Had(24, 15),
+                };
+  
+            List<Rebrik> rebriky = new List<Rebrik>
+                {
+                 new Rebrik(3, 22),
+                 new Rebrik(16, 35),
+                 new Rebrik(28, 38),
+                 new Rebrik(33, 46),
+                 new Rebrik(49, 56),
+                };
 
 
 
 
 
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("     HHH       HHH           AAA           DDDDDDDD      YYYY         YYY");
-            Console.WriteLine("     HHH       HHH          AAAAA          DDD    DDD     YYY        YYY");
-            Console.WriteLine("     HHH       HHH         AAA AAA         DDD     DDD     YYY      YYY");
-            Console.WriteLine("     HHH       HHH        AAA   AAA        DDD      DDD     YYY    YYY");
-            Console.WriteLine("     HHHHHHHHHHHHH       AAAAAAAAAAA       DDD       DDD     YYY  YYY");
-            Console.WriteLine("     HHHHHHHHHHHHH      AAAAAAAAAAAAA      DDD       DDD      YYYYY");
-            Console.WriteLine("     HHH       HHH     AAA         AAA     DDD      DDD        YYY");
-            Console.WriteLine("     HHH       HHH    AAA           AAA    DDD     DDD         YYY");
-            Console.WriteLine("     HHH       HHH   AAA             AAA   DDDDDDDD            YYY");
-            Console.WriteLine();
-            Console.WriteLine("                                 AAA");
-            Console.WriteLine("                                AAAAA");
-            Console.WriteLine("                               AAA AAA");
-            Console.WriteLine("                              AAA   AAA");
-            Console.WriteLine("                             AAAAAAAAAAA");
-            Console.WriteLine("                            AAAAAAAAAAAAA");
-            Console.WriteLine("                           AAA         AAA");
-            Console.WriteLine("                          AAA           AAA");
-            Console.WriteLine("                         AAA             AAA");
-            Console.WriteLine();
-            Console.WriteLine("RRRRRRRR      EEEEEEEEE   BBBBBBBB     RRRRRRRR     IIIIIIII  KKK      KKK   YYYY         YYY");
-            Console.WriteLine("RRR    RRR    EEE         BBB    BBB   RRR    RRR     III     KKK    KKK      YYY        YYY");
-            Console.WriteLine("RRR     RRR   EEE         BBB     BBB  RRR     RRR    III     KKK  KKK         YYY      YYY");
-            Console.WriteLine("RRR     RRR   EEE         BBB    BBB   RRR     RRR    III     KKK KKK           YYY    YYY");
-            Console.WriteLine("RRR    RRR    EEEEEEE     BBBBBBB      RRR    RRR     III     KKKKKK             YYY  YYY");
-            Console.WriteLine("RRR RRRR      EEE         BBB    BBB   RRR RRRR       III     KKK KKK             YYYYY");
-            Console.WriteLine("RRR   RRR     EEE         BBB     BBB  RRR   RRR      III     KKK  KKK             YYY");
-            Console.WriteLine("RRR    RRR    EEE         BBB    BBB   RRR    RRR     III     KKK   KKK            YYY");
-            Console.WriteLine("RRR     RRR   EEEEEEEEE   BBBBBBBB     RRR     RRR  IIIIIIII  KKK     KKK          YYY");
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("$$\\   $$\\                 $$\\                                 $$$$$$$\\            $$\\                 $$\\ $$\\                 ");
+            Console.WriteLine("$$ |  $$ |                $$ |                                $$  __$$\\           $$ |                \\__|$$ |                ");
+            Console.WriteLine("$$ |  $$ | $$$$$$\\   $$$$$$$ |$$\\   $$\\        $$$$$$\\        $$ |  $$ | $$$$$$\\  $$$$$$$\\   $$$$$$\\  $$\\ $$ |  $$\\ $$\\   $$\\ ");
+            Console.WriteLine("$$$$$$$$ | \\____$$\\ $$  __$$ |$$ |  $$ |       \\____$$\\       $$$$$$$  |$$  __$$\\ $$  __$$\\ $$  __$$\\ $$ |$$ | $$  |$$ |  $$ |");
+            Console.WriteLine("$$  __$$ | $$$$$$$ |$$ /  $$ |$$ |  $$ |       $$$$$$$ |      $$  __$$< $$$$$$$$ |$$ |  $$ |$$ |  \\__|$$ |$$$$$$  / $$ |  $$ |");
+            Console.WriteLine("$$ |  $$ |$$  __$$ |$$ |  $$ |$$ |  $$ |      $$  __$$ |      $$ |  $$ |$$   ____|$$ |  $$ |$$ |      $$ |$$  _$$<  $$ |  $$ |");
+            Console.WriteLine("$$ |  $$ |\\$$$$$$$ |\\$$$$$$$ |\\$$$$$$$ |      \\$$$$$$$ |      $$ |  $$ |\\$$$$$$$\\ $$$$$$$  |$$ |      $$ |$$ | \\$$\\ \\$$$$$$$ |");
+            Console.WriteLine("\\__|  \\__| \\_______| \\_______| \\____$$ |       \\_______|      \\__|  \\__| \\_______|\\_______/ \\__|      \\__|\\__|  \\__| \\____$$ |");
+            Console.WriteLine("                              $$\\   $$ |                                                                            $$\\   $$ |");
+            Console.WriteLine("                              \\$$$$$$  |                                                                            \\$$$$$$  |");
+            Console.WriteLine("                               \\______/                                                                              \\______/ ");
             Console.WriteLine();
             Thread.Sleep(2000);
             Console.WriteLine("Ak chceš začať hrať hru zmačkni tlačidlo ENTER");
@@ -123,12 +122,100 @@ namespace hadyARebriky
 
 
                             Console.WriteLine("Hráč 1 hodí kockou:");
-                            int hod1 = hrac1.hodKocky(kocka);
+                            int hod1 = hrac1.Kocka.Hod();
                             Console.WriteLine($"{hrac1.Meno} hodil: {hod1} (Skóre: {hrac1.Pozicia})");
 
                             Console.WriteLine("Hráč 2 hodí kockou:");
-                            int hod2 = hrac2.hodKocky(kocka);
+                            int hod2 = hrac2.Kocka.Hod();
                             Console.WriteLine($"{hrac2.Meno} hodil: {hod2} (Skóre: {hrac2.Pozicia})");
+
+                            var had = hadi.FirstOrDefault(h => h.Start == hrac1.Pozicia); // + hod, 
+                            if (had != null)
+                            {
+                                Console.WriteLine($"Ooohhh nie aka skoda{hrac1.Meno} klesá z {had.Start} na {had.End} kvôli hadovi! Este sa to da zachranit nevzdavaj sa");
+
+                                
+                            }
+
+                            var rebrik = rebriky.FirstOrDefault(r => r.Start == hrac1.Pozicia);
+                            if (rebrik != null)
+                            {
+                                Console.WriteLine($"Super {hrac1.Meno} stúpa z {rebrik.Start} na {rebrik.End} pomocou rebríku!");
+
+                                hrac1.Pozicia = rebrik.End;
+                            }
+
+                            Console.WriteLine($"{hrac1.Meno} je teraz na pozícii {hrac1.Pozicia}");
+
+                            if (hrac1.Pozicia == 60)
+                            {
+                                Console.WriteLine($"Blahozelam {hrac1.Meno} vyhral hru! :)");
+                                Console.WriteLine("$$\\    $$\\ $$\\     $$\\ $$\\   $$\\ $$$$$$$\\   $$$$$$\\  $$\\              $$$$$$\\  $$$$$$\\ ");
+                                Console.WriteLine("$$ |   $$ |\\$$\\   $$  |$$ |  $$ |$$  __$$\\ $$  __$$\\ $$ |            $$  __$$\\ \\_$$  _|");
+                                Console.WriteLine("$$ |   $$ | \\$$\\ $$  / $$ |  $$ |$$ |  $$ |$$ /  $$ |$$ |            $$ /  \\__|  $$ |  ");
+                                Console.WriteLine("\\$$\\  $$  |  \\$$$$  /  $$$$$$$$ |$$$$$$$  |$$$$$$$$ |$$ |            \\$$$$$$\\    $$ |  ");
+                                Console.WriteLine(" \\$$\\$$  /    \\$$  /   $$  __$$ |$$  __$$< $$  __$$ |$$ |             \\____$$\\   $$ |  ");
+                                Console.WriteLine("  \\$$$  /      $$ |    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |            $$\\   $$ |  $$ |  ");
+                                Console.WriteLine("   \\$  /       $$ |    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$$$$$$$\\       \\$$$$$$  |$$$$$$\\ ");
+                                Console.WriteLine("    \\_/        \\__|    \\__|  \\__|\\__|  \\__|\\__|  \\__|\\________|       \\______/ \\______|");
+                                
+
+                                break;
+                            }
+                            if (hrac1.Pozicia > 60)
+                            {
+                                Console.WriteLine($"Bohuzial {hrac1.Meno} nemoze ist dalej. Hracie pole uz dalej nepokracuje. Hrac sa nachadza {hrac1.Pozicia}  ");
+                            }
+
+
+
+
+
+
+
+
+
+                            var had1 = hadi.FirstOrDefault(h => h.Start == hrac2.Pozicia);
+                            if (had != null)
+                            {
+                                Console.WriteLine($"Ooohhh nie aka skoda{hrac2.Meno} klesá z {had.Start} na {had.End} kvôli hadovi! Este sa to da yachranit nevzdavaj sa");
+
+                                
+                            }
+
+                            var rebrik1 = rebriky.FirstOrDefault(r => r.Start == hrac2.Pozicia);
+                            if (rebrik != null)
+                            {
+                                Console.WriteLine($"Super {hrac2.Meno} stúpa z {rebrik.Start} na {rebrik.End} pomocou rebríku!");
+
+                                hrac1.Pozicia = rebrik.End;
+                            }
+
+                            Console.WriteLine($"{hrac2.Meno} je teraz na pozícii {hrac2.Pozicia}");
+
+                            if (hrac2.Pozicia == 60)
+                            {
+                                Console.WriteLine($"Blahozelam {hrac2.Meno} vyhral hru! :)");
+                                Console.WriteLine("$$\\    $$\\ $$\\     $$\\ $$\\   $$\\ $$$$$$$\\   $$$$$$\\  $$\\              $$$$$$\\  $$$$$$\\ ");
+                                Console.WriteLine("$$ |   $$ |\\$$\\   $$  |$$ |  $$ |$$  __$$\\ $$  __$$\\ $$ |            $$  __$$\\ \\_$$  _|");
+                                Console.WriteLine("$$ |   $$ | \\$$\\ $$  / $$ |  $$ |$$ |  $$ |$$ /  $$ |$$ |            $$ /  \\__|  $$ |  ");
+                                Console.WriteLine("\\$$\\  $$  |  \\$$$$  /  $$$$$$$$ |$$$$$$$  |$$$$$$$$ |$$ |            \\$$$$$$\\    $$ |  ");
+                                Console.WriteLine(" \\$$\\$$  /    \\$$  /   $$  __$$ |$$  __$$< $$  __$$ |$$ |             \\____$$\\   $$ |  ");
+                                Console.WriteLine("  \\$$$  /      $$ |    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |            $$\\   $$ |  $$ |  ");
+                                Console.WriteLine("   \\$  /       $$ |    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$$$$$$$\\       \\$$$$$$  |$$$$$$\\ ");
+                                Console.WriteLine("    \\_/        \\__|    \\__|  \\__|\\__|  \\__|\\__|  \\__|\\________|       \\______/ \\______|");
+                                
+
+
+                                break;
+                            }
+                            if (hrac2.Pozicia > 60)
+                            {
+                                Console.WriteLine($"Bohuzial {hrac2.Meno} nemoze ist dalej. Hracie pole uz dalej nepokracuje. Hrac sa nachadza {hrac2.Pozicia}  ");
+                            }
+                   
+
+                              
                         }
                         break;
 

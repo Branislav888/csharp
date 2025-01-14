@@ -18,7 +18,7 @@ namespace hadyARebriky
                 End = end;
             }
 
-            public int Skontroluj(int pozicia)
+            public int Skontroluj (int pozicia)
             {
                 if (pozicia == Start)
                 {
