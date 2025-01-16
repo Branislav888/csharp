@@ -15,7 +15,7 @@ namespace hadyARebriky
 
         public Hrac(string meno)
         {
-            meno = Meno;
+            Meno = meno;
             Pozicia = 0;
         }
 
