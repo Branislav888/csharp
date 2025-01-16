@@ -123,52 +123,55 @@ namespace hadyARebriky
                             while (true)
 
                             {
-                                if (aktualnyHrac == 1) ;
+                                if (aktualnyHrac == 1) 
                                 {
                                     Console.WriteLine("Hráč 1 hodí kockou:");
                                     Console.ReadLine();
                                     int hod1 = kocka.Hod();
                                     hrac1.Pozicia += hod1;
                                     Console.WriteLine($"{hrac1.Meno} hodil: {hod1} (Skóre: {hrac1.Pozicia})");
-                                    
+
                                     aktualnyHrac = 2;
                                     var had = hadi.FirstOrDefault(h => h.Start == hrac1.Pozicia);
-                                  if (had != null)
-                                  {hrac1.Pozicia = had.End;
-                                    Console.WriteLine($"Ooohhh nie aka skoda{hrac1.Meno} klesá z {had.Start} na {had.End} kvôli hadovi! Este sa to da zachranit nevzdavaj sa");
+                                    if (had != null)
+                                    {
+                                        hrac1.Pozicia = had.End;
+                                        Console.WriteLine($"Ooohhh nie aka skoda{hrac1.Meno} klesá z {had.Start} na {had.End} kvôli hadovi! Este sa to da zachranit nevzdavaj sa");
 
-                                    
-                                  }
 
-                                   var rebrik = rebriky.FirstOrDefault(r => r.Start == hrac1.Pozicia);
-                                   if (rebrik != null)
-                                   { hrac1.Pozicia = rebrik.End;
-                                    Console.WriteLine($"Super {hrac1.Meno} stúpa z {rebrik.Start} na {rebrik.End} pomocou rebríku!");
+                                    }
 
-                                   
-                                   }
+                                    var rebrik = rebriky.FirstOrDefault(r => r.Start == hrac1.Pozicia);
+                                    if (rebrik != null)
+                                    {
+                                        hrac1.Pozicia = rebrik.End;
+                                        Console.WriteLine($"Super {hrac1.Meno} stúpa z {rebrik.Start} na {rebrik.End} pomocou rebríku!");
+
+
+                                    }
 
                                     Console.WriteLine($"{hrac1.Meno} je teraz na pozícii {hrac1.Pozicia}");
 
                                     if (hrac1.Pozicia == 60)
                                     {
-                                     Console.WriteLine($"Blahozelam {hrac1.Meno} vyhral hru! :)");
-                                     Console.WriteLine("$$\\    $$\\ $$\\     $$\\ $$\\   $$\\ $$$$$$$\\   $$$$$$\\  $$\\              $$$$$$\\  $$$$$$\\ ");
-                                     Console.WriteLine("$$ |   $$ |\\$$\\   $$  |$$ |  $$ |$$  __$$\\ $$  __$$\\ $$ |            $$  __$$\\ \\_$$  _|");
-                                     Console.WriteLine("$$ |   $$ | \\$$\\ $$  / $$ |  $$ |$$ |  $$ |$$ /  $$ |$$ |            $$ /  \\__|  $$ |  ");
-                                     Console.WriteLine("\\$$\\  $$  |  \\$$$$  /  $$$$$$$$ |$$$$$$$  |$$$$$$$$ |$$ |            \\$$$$$$\\    $$ |  ");
-                                     Console.WriteLine(" \\$$\\$$  /    \\$$  /   $$  __$$ |$$  __$$< $$  __$$ |$$ |             \\____$$\\   $$ |  ");
-                                     Console.WriteLine("  \\$$$  /      $$ |    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |            $$\\   $$ |  $$ |  ");
-                                     Console.WriteLine("   \\$  /       $$ |    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$$$$$$$\\       \\$$$$$$  |$$$$$$\\ ");
-                                     Console.WriteLine("    \\_/        \\__|    \\__|  \\__|\\__|  \\__|\\__|  \\__|\\________|       \\______/ \\______|");
+                                        Console.WriteLine($"Blahozelam {hrac1.Meno} vyhral hru! :)");
+                                        Console.WriteLine("$$\\    $$\\ $$\\     $$\\ $$\\   $$\\ $$$$$$$\\   $$$$$$\\  $$\\              $$$$$$\\  $$$$$$\\ ");
+                                        Console.WriteLine("$$ |   $$ |\\$$\\   $$  |$$ |  $$ |$$  __$$\\ $$  __$$\\ $$ |            $$  __$$\\ \\_$$  _|");
+                                        Console.WriteLine("$$ |   $$ | \\$$\\ $$  / $$ |  $$ |$$ |  $$ |$$ /  $$ |$$ |            $$ /  \\__|  $$ |  ");
+                                        Console.WriteLine("\\$$\\  $$  |  \\$$$$  /  $$$$$$$$ |$$$$$$$  |$$$$$$$$ |$$ |            \\$$$$$$\\    $$ |  ");
+                                        Console.WriteLine(" \\$$\\$$  /    \\$$  /   $$  __$$ |$$  __$$< $$  __$$ |$$ |             \\____$$\\   $$ |  ");
+                                        Console.WriteLine("  \\$$$  /      $$ |    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |            $$\\   $$ |  $$ |  ");
+                                        Console.WriteLine("   \\$  /       $$ |    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$$$$$$$\\       \\$$$$$$  |$$$$$$\\ ");
+                                        Console.WriteLine("    \\_/        \\__|    \\__|  \\__|\\__|  \\__|\\__|  \\__|\\________|       \\______/ \\______|");
 
 
-                                      break;
+                                        break;
                                     }
                                     if (hrac1.Pozicia > 60)
                                     {
-                                      Console.WriteLine($"Bohuzial {hrac1.Meno} nemoze ist dalej. Hracie pole uz dalej nepokracuje. Hrac sa nachadza {hrac1.Pozicia}  ");
-                                      hrac1.Pozicia -= hod1;
+                                        hrac1.Pozicia -= hod1;
+                                        Console.WriteLine($"Bohuzial {hrac1.Meno} nemoze ist dalej. Hracie pole uz dalej nepokracuje. Hrac sa nachadza {hrac1.Pozicia}  ");
+                                        
                                     }
                                 }
 
@@ -181,53 +184,49 @@ namespace hadyARebriky
                                     hrac2.Pozicia += hod2;
                                     Console.WriteLine($"{hrac2.Meno} hodil: {hod2} (Skóre: {hrac2.Pozicia})");
 
-                                    aktualnyHrac = 1;  
+                                    aktualnyHrac = 1;
                                     var had1 = hadi.FirstOrDefault(h => h.Start == hrac2.Pozicia);
                                     if (had1 != null)
-                                    {hrac2.Pozicia = had1.End;
-                                     Console.WriteLine($"Ooohhh nie aka skoda{hrac2.Meno} klesá z {had1.Start} na {had1.End} kvôli hadovi! Este sa to da yachranit nevzdavaj sa");
+                                    {
+                                        hrac2.Pozicia = had1.End;
+                                        Console.WriteLine($"Ooohhh nie aka skoda{hrac2.Meno} klesá z {had1.Start} na {had1.End} kvôli hadovi! Este sa to da yachranit nevzdavaj sa");
 
-                                    
+
                                     }
 
-                                 var rebrik1 = rebriky.FirstOrDefault(r => r.Start == hrac2.Pozicia);
-                                   if (rebrik1 != null)
-                                   { hrac1.Pozicia = rebrik1.End;
-                                    Console.WriteLine($"Super {hrac2.Meno} stúpa z {rebrik1.Start} na {rebrik1.End} pomocou rebríku!");
+                                    var rebrik1 = rebriky.FirstOrDefault(r => r.Start == hrac2.Pozicia);
+                                    if (rebrik1 != null)
 
-                                   
-                                   }
+                                    Console.WriteLine($"{hrac2.Meno} je teraz na pozícii {hrac2.Pozicia}");
 
-                                   Console.WriteLine($"{hrac2.Meno} je teraz na pozícii {hrac2.Pozicia}");
-
-                                   if (hrac2.Pozicia == 60)
-                                   {
-                                    Console.WriteLine($"Blahozelam {hrac2.Meno} vyhral hru! :)");
-                                    Console.WriteLine("$$\\    $$\\ $$\\     $$\\ $$\\   $$\\ $$$$$$$\\   $$$$$$\\  $$\\              $$$$$$\\  $$$$$$\\ ");
-                                    Console.WriteLine("$$ |   $$ |\\$$\\   $$  |$$ |  $$ |$$  __$$\\ $$  __$$\\ $$ |            $$  __$$\\ \\_$$  _|");
-                                    Console.WriteLine("$$ |   $$ | \\$$\\ $$  / $$ |  $$ |$$ |  $$ |$$ /  $$ |$$ |            $$ /  \\__|  $$ |  ");
-                                    Console.WriteLine("\\$$\\  $$  |  \\$$$$  /  $$$$$$$$ |$$$$$$$  |$$$$$$$$ |$$ |            \\$$$$$$\\    $$ |  ");
-                                    Console.WriteLine(" \\$$\\$$  /    \\$$  /   $$  __$$ |$$  __$$< $$  __$$ |$$ |             \\____$$\\   $$ |  ");
-                                    Console.WriteLine("  \\$$$  /      $$ |    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |            $$\\   $$ |  $$ |  ");
-                                    Console.WriteLine("   \\$  /       $$ |    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$$$$$$$\\       \\$$$$$$  |$$$$$$\\ ");
-                                    Console.WriteLine("    \\_/        \\__|    \\__|  \\__|\\__|  \\__|\\__|  \\__|\\________|       \\______/ \\______|");
+                                    if (hrac2.Pozicia == 60)
+                                    {
+                                        Console.WriteLine($"Blahozelam {hrac2.Meno} vyhral hru! :)");
+                                        Console.WriteLine("$$\\    $$\\ $$\\     $$\\ $$\\   $$\\ $$$$$$$\\   $$$$$$\\  $$\\              $$$$$$\\  $$$$$$\\ ");
+                                        Console.WriteLine("$$ |   $$ |\\$$\\   $$  |$$ |  $$ |$$  __$$\\ $$  __$$\\ $$ |            $$  __$$\\ \\_$$  _|");
+                                        Console.WriteLine("$$ |   $$ | \\$$\\ $$  / $$ |  $$ |$$ |  $$ |$$ /  $$ |$$ |            $$ /  \\__|  $$ |  ");
+                                        Console.WriteLine("\\$$\\  $$  |  \\$$$$  /  $$$$$$$$ |$$$$$$$  |$$$$$$$$ |$$ |            \\$$$$$$\\    $$ |  ");
+                                        Console.WriteLine(" \\$$\\$$  /    \\$$  /   $$  __$$ |$$  __$$< $$  __$$ |$$ |             \\____$$\\   $$ |  ");
+                                        Console.WriteLine("  \\$$$  /      $$ |    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |            $$\\   $$ |  $$ |  ");
+                                        Console.WriteLine("   \\$  /       $$ |    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$$$$$$$\\       \\$$$$$$  |$$$$$$\\ ");
+                                        Console.WriteLine("    \\_/        \\__|    \\__|  \\__|\\__|  \\__|\\__|  \\__|\\________|       \\______/ \\______|");
 
 
 
-                                    break;
-                                   }
-                                   if (hrac2.Pozicia > 60)
-                                   {
-                                    hrac2.Pozicia -= hod2;
-                                    Console.WriteLine($"Bohuzial {hrac2.Meno} nemoze ist dalej. Hracie pole uz dalej nepokracuje. Hrac sa nachadza {hrac2.Pozicia}  ");
-                                    
-                                   }
+                                        break;
+                                    }
+                                    if (hrac2.Pozicia > 60)
+                                    {
+                                        hrac2.Pozicia -= hod2;
+                                        Console.WriteLine($"Bohuzial {hrac2.Meno} nemoze ist dalej. Hracie pole uz dalej nepokracuje. Hrac sa nachadza {hrac2.Pozicia}  ");
+
+                                    }
 
 
-                            }
+                                }
 
-                                }  
-                                
+                            
+                        }   
 
 
                                
