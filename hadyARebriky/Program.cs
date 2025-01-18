@@ -45,17 +45,17 @@ namespace hadyARebriky
             Console.WriteLine("                               \\______/                                                                              \\______/ ");
             Console.WriteLine();
             Thread.Sleep(2000);
-            Console.WriteLine("Ak chceš začať hrať hru zmačkni tlačidlo ENTER");
+            Console.WriteLine("Ak chceš začať hrať hru stlač tlačidlo ENTER");
             Thread.Sleep(1000);
             Console.ResetColor();
             Console.ReadKey();
             Console.Clear();
 
             Console.WriteLine("Vyber možnosť:");
-            Console.WriteLine("Zmačkni čislo 1 ak chceš vedieť informacie o tom kdo vytvoril tuto hru");
-            Console.WriteLine("Zmačkni čislo 2 ak chceš vedieť pravidla o tejto hre");
-            Console.WriteLine("Zmačkni čislo 3 ak chceš napisať recenziu alebo dať napad na vylepšenie");
-            Console.WriteLine("Zmačkni čislo 4 ak chceš začať hrať hru");
+            Console.WriteLine("Stlač číslo 1, ak chceš vedieť informácie o tom, kto vytvoril túto hru.");
+            Console.WriteLine("Stlač číslo 2, ak chceš vedieť pravidlá tejto hry.");
+            Console.WriteLine("Stlač číslo 3, ak chceš napísať recenziu alebo dať nápad na vylepšenie.");
+            Console.WriteLine("Stlač číslo 4, ak chceš začať hrať hru.");
             
             
 
@@ -107,7 +107,7 @@ namespace hadyARebriky
 
                    
                     case "3":
-                        Console.WriteLine("Môžete nam napísať ako sa vam hra pači a čo by ste na nej vylepšili na email branislaw3@gmail.com alebo alicalastikova12@gmail.com");
+                        Console.WriteLine("Môžete nám napísať, ako sa vám hra páči a čo by ste na to vylepšili, na email branislaw3@gmail.com alebo alicalastikova12 @gmail.com .");
                         Thread.Sleep(100);
                         break;
 
@@ -116,9 +116,7 @@ namespace hadyARebriky
                         {
                             Kocka kocka = new Kocka();
                             Hrac hrac1 = new Hrac("Hráč 1");
-                            Hrac hrac2 = new Hrac("Hráč 2"); // hod kockou, prepocitat poziciu hraca, ci sa hrac nachadza pod hadikom a rebrikom (pomocou LINQ pozerame sa na hodnotu start pomocou listu) )
-                            // prepocitat hodnotu ak sa nachadza
-                            // PREPOCITAT PO KAZDOM HODE CI HRAC NEVYHRAL
+                            Hrac hrac2 = new Hrac("Hráč 2");
                             int aktualnyHrac = 1;
                             while (true)
 
@@ -136,7 +134,7 @@ namespace hadyARebriky
                                     if (had != null)
                                     {
                                         hrac1.Pozicia = had.End;
-                                        Console.WriteLine($"Ooohhh nie aka skoda{hrac1.Meno} klesá z {had.Start} na {had.End} kvôli hadovi! Este sa to da zachranit nevzdavaj sa");
+                                        Console.WriteLine($"Ooohhh nie aka škoda{hrac1.Meno} klesá z {had.Start} na {had.End} kvôli hadovi!");
 
 
                                     }
@@ -150,11 +148,11 @@ namespace hadyARebriky
 
                                     }
 
-                                    Console.WriteLine($"{hrac1.Meno} je teraz na pozícii {hrac1.Pozicia}");
+                                    Console.WriteLine($"{hrac1.Meno} je teraz na pozícií {hrac1.Pozicia}");
 
                                     if (hrac1.Pozicia == 60)
                                     {
-                                        Console.WriteLine($"Blahozelam {hrac1.Meno} vyhral hru! :)");
+                                        Console.WriteLine($"Blahoželam {hrac1.Meno} vyhral hru! :)");
                                         Console.WriteLine("$$\\    $$\\ $$\\     $$\\ $$\\   $$\\ $$$$$$$\\   $$$$$$\\  $$\\              $$$$$$\\  $$$$$$\\ ");
                                         Console.WriteLine("$$ |   $$ |\\$$\\   $$  |$$ |  $$ |$$  __$$\\ $$  __$$\\ $$ |            $$  __$$\\ \\_$$  _|");
                                         Console.WriteLine("$$ |   $$ | \\$$\\ $$  / $$ |  $$ |$$ |  $$ |$$ /  $$ |$$ |            $$ /  \\__|  $$ |  ");
@@ -170,7 +168,7 @@ namespace hadyARebriky
                                     if (hrac1.Pozicia > 60)
                                     {
                                         hrac1.Pozicia -= hod1;
-                                        Console.WriteLine($"Bohuzial {hrac1.Meno} nemoze ist dalej. Hracie pole uz dalej nepokracuje. Hrac sa nachadza {hrac1.Pozicia}  ");
+                                        Console.WriteLine($"Bohužial {hrac1.Meno} nemôže ísť ďalej. Hracie pole už ďalej nepokračuje. Hrač sa nachádza {hrac1.Pozicia}  ");
                                         
                                     }
                                 }
@@ -189,7 +187,7 @@ namespace hadyARebriky
                                     if (had1 != null)
                                     {
                                         hrac2.Pozicia = had1.End;
-                                        Console.WriteLine($"Ooohhh nie aka skoda{hrac2.Meno} klesá z {had1.Start} na {had1.End} kvôli hadovi! Este sa to da yachranit nevzdavaj sa");
+                                        Console.WriteLine($"Ooohhh nie aka skoda{hrac2.Meno} klesá z {had1.Start} na {had1.End} kvôli hadovi!);
 
 
                                     }
@@ -201,7 +199,7 @@ namespace hadyARebriky
 
                                     if (hrac2.Pozicia == 60)
                                     {
-                                        Console.WriteLine($"Blahozelam {hrac2.Meno} vyhral hru! :)");
+                                        Console.WriteLine($"Blahoželam {hrac2.Meno} vyhral hru! :)");
                                         Console.WriteLine("$$\\    $$\\ $$\\     $$\\ $$\\   $$\\ $$$$$$$\\   $$$$$$\\  $$\\              $$$$$$\\  $$$$$$\\ ");
                                         Console.WriteLine("$$ |   $$ |\\$$\\   $$  |$$ |  $$ |$$  __$$\\ $$  __$$\\ $$ |            $$  __$$\\ \\_$$  _|");
                                         Console.WriteLine("$$ |   $$ | \\$$\\ $$  / $$ |  $$ |$$ |  $$ |$$ /  $$ |$$ |            $$ /  \\__|  $$ |  ");
@@ -218,7 +216,7 @@ namespace hadyARebriky
                                     if (hrac2.Pozicia > 60)
                                     {
                                         hrac2.Pozicia -= hod2;
-                                        Console.WriteLine($"Bohuzial {hrac2.Meno} nemoze ist dalej. Hracie pole uz dalej nepokracuje. Hrac sa nachadza {hrac2.Pozicia}  ");
+                                        Console.WriteLine($"Bohuzial {hrac2.Meno} nemôže ísť ďalej. Hracie pole už ďalej nepokračuje. Hrač sa nachádza {hrac2.Pozicia}  ");
 
                                     }
 
