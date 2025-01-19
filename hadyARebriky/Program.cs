@@ -76,12 +76,12 @@ namespace hadyARebriky
                         Console.WriteLine("Volám sa Branislav Sventek. Narodil som sa v Čadci presnejšie na Horelici, kde do teraz žijem.");
                         Console.WriteLine(" Mam rad hudbu asi najviac obľúbený žáner R&B. Rad pozerám filmy každého druhu a najradšej trávim čas s ľuďmi, ktorých mam rád. ");
                         Thread.Sleep(3500);
-                        Console.WriteLine("Volám sa Alica Laštíková bývam v tepličke nad Váhom 15 rokov vo voľnom čase rada pozerám seriály z rôznou tematikov napríklad akčné darama anime sci-fi atd.");
+                        Console.WriteLine("Volám sa Alica Laštíková bývam v Tepličke nad Váhom 15 rokov vo voľnom čase rada pozerám seriály z rôznou tematikov napríklad akčné darama anime sci-fi atd.");
                         Console.WriteLine(" Milujem mačičky milujem a baví má dizajn a architektúra ale nechcem sa tomu venovať možno uvidím rada trávím čas a so svojimi kamarátmi.");
                         Thread.Sleep(3500);
                         Console.WriteLine("Teraz sme žiaci na SPŠ IT v KNM.");
                         Thread.Sleep(500);
-                        Console.WriteLine("Tento projekt nám dal veľa námahy a úsilia ale hlavne vela skúsenosti tak hádam sa vám bude páčiť :)");
+                        Console.WriteLine("Tento projekt nám dal veľa námahy a úsilia ale hlavne veľa skúsenosti tak hádam sa vám bude páčiť :)");
                         Thread.Sleep(1000);
                         break;
 
