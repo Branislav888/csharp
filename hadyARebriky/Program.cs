@@ -71,13 +71,13 @@ namespace hadyARebriky
                 switch (choice)
                 {
                     case "1":
-                        Console.WriteLine("Možno sa pýtate. Kto je za touto hrou? Radi by sme sa vám prestavili a povedali par veci o nás");
+                        Console.WriteLine("Možno sa pýtate. Kto je za touto hrou? Radi by sme sa vám predstavili a povedali par veci o nás");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Volám sa Branislav Sventek. Narodil som sa v Čadci presnejšie na Horelici, kde do teraz žijem.");
-                        Console.WriteLine(" Mam rad hudbu asi najviac obľúbený žáner R&B. Rad pozerám filmy každého druhu a najradšej trávim čas s ľuďmi, ktorých mam rád. ");
+                        Console.WriteLine("Volám sa Branislav Sventek. Narodil som sa v Čadci presnejšie na Horelici, kde doteraz žijem.");
+                        Console.WriteLine("Mám rád hudbu najobľúbenejší žáner R&B. Rad pozerám filmy každého druhu a najradšej trávim čas s ľuďmi, ktorých mam rád. ");
                         Thread.Sleep(3500);
-                        Console.WriteLine("Volám sa Alica Laštíková bývam v Tepličke nad Váhom 15 rokov vo voľnom čase rada pozerám seriály z rôznou tematikov napríklad akčné darama anime sci-fi atd.");
-                        Console.WriteLine(" Milujem mačičky milujem a baví má dizajn a architektúra ale nechcem sa tomu venovať možno uvidím rada trávím čas a so svojimi kamarátmi.");
+                        Console.WriteLine("Volám sa Alica Laštíková bývam v Tepličke nad Váhom 15 rokov vo voľnom čase rada pozerám seriály s rôznou tematikou napríklad akčné, dráma, anime, sci-fi atď.");
+                        Console.WriteLine("Milujem mačičky a baví ma dizajn a architektúra ale nechcem sa tomu venovať možno uvidím rada trávím čas so svojimi kamarátmi.");
                         Thread.Sleep(3500);
                         Console.WriteLine("Teraz sme žiaci na SPŠ IT v KNM.");
                         Thread.Sleep(500);
@@ -87,27 +87,27 @@ namespace hadyARebriky
 
 
                     case "2":
-                        Console.WriteLine("Pravidla hry su jednoduché:");
+                        Console.WriteLine("Pravidlá hry sú jednoduché:");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Hodiš kocko a posunieš sa dane poličko");
+                        Console.WriteLine("Hodíš kockou a posunieš sa na dané políčko.");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Ak na poličku sa nachdza rebrik posunieš sa na poličko kde rebrik konči");
+                        Console.WriteLine("Ak sa na poličku nachádza rebrík posunieš sa na poličko kde rebrík končí.");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Ak sa nachadzaš na poličku kde je hadová hlava");
+                        Console.WriteLine("Ak sa nachádzaš na políčku, kde je hadia hlava.");
                         Thread.Sleep(1000);
-                        Console.WriteLine("tak sa  Console.WriteLin až na hodov chvost ");
+                        Console.WriteLine("Tak sa až na hodov chvost. ");
                         Thread.Sleep(1000);
                         Console.WriteLine("Kdo bode prvý v cieli hrava.");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Ak pravidla neboli jasné tak nam dajte vedieť na naš email :))");
+                        Console.WriteLine("Ak pravidla neboli jasné tak nam dajte vedieť na naš email. :))");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Prajeme vela zabavý a hlavne šťastia");
+                        Console.WriteLine("Prajeme vela zabavý a hlavne šťastia.");
                         Thread.Sleep(1000);
                         break;
 
                    
                     case "3":
-                        Console.WriteLine("Môžete nám napísať, ako sa vám hra páči a čo by ste na to vylepšili, na email branislaw3@gmail.com alebo alicalastikova12 @gmail.com .");
+                        Console.WriteLine("Môžete nám napísať, ako sa vám hra páči a čo by ste na to vylepšili, na email branislaw3@gmail.com alebo alicalastikova12@gmail.com .");
                         Thread.Sleep(100);
                         break;
 
