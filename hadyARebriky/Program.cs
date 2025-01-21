@@ -17,7 +17,7 @@ namespace hadyARebriky
                 new Had(10, 4),
                 new Had(24, 15),
                 };
-  
+
             List<Rebrik> rebriky = new List<Rebrik>
                 {
                  new Rebrik(3, 22),
@@ -45,69 +45,69 @@ namespace hadyARebriky
             Console.WriteLine("                               \\______/                                                                              \\______/ ");
             Console.WriteLine();
             Thread.Sleep(2000);
-            Console.WriteLine("Ak chceš začať hrať hru zmačkni tlačidlo ENTER");
+            Console.WriteLine("Ak chceš začať hrať hru stlač tlačidlo ENTER");
             Thread.Sleep(1000);
             Console.ResetColor();
             Console.ReadKey();
             Console.Clear();
 
             Console.WriteLine("Vyber možnosť:");
-            Console.WriteLine("Zmačkni čislo 1 ak chceš vedieť informacie o tom kdo vytvoril tuto hru");
-            Console.WriteLine("Zmačkni čislo 2 ak chceš vedieť pravidla o tejto hre");
-            Console.WriteLine("Zmačkni čislo 3 ak chceš napisať recenziu alebo dať napad na vylepšenie");
-            Console.WriteLine("Zmačkni čislo 4 ak chceš začať hrať hru");
-            
-            
+            Console.WriteLine("Stlač číslo 1, ak chceš vedieť informácie o tom, kto vytvoril túto hru.");
+            Console.WriteLine("Stlač číslo 2, ak chceš vedieť pravidlá tejto hry.");
+            Console.WriteLine("Stlač číslo 3, ak chceš napísať recenziu alebo dať nápad na vylepšenie.");
+            Console.WriteLine("Stlač číslo 4, ak chceš začať hrať hru.");
 
-            
+
+
+
             bool running = true;
-            while (running) 
+            while (running)
             {
 
-                
+
                 var choice = Console.ReadLine();
 
-                
+
                 switch (choice)
                 {
                     case "1":
-                        Console.WriteLine("Možno sa pýtate. Kto je za touto hrou? Radi by sme sa vám prestavili a povedali par veci o nás");
+                        Console.WriteLine("Možno sa pýtate. Kto je za touto hrou? Radi by sme sa vám predstavili a povedali par veci o nás");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Volám sa Branislav Sventek. Narodil som sa v Čadci presnejšie na Horelici, kde do teraz žijem.");
-                        Console.WriteLine(" Mam rad hudbu asi najviac obľúbený žáner R&B. Rad pozerám filmy každého druhu a najradšej trávim čas s ľuďmi, ktorých mam rád. ");
+                        Console.WriteLine("Volám sa Branislav Sventek. Narodil som sa v Čadci presnejšie na Horelici, kde doteraz žijem.");
+                        Console.WriteLine("Mám rád hudbu najobľúbenejší žáner R&B. Rad pozerám filmy každého druhu a najradšej trávim čas s ľuďmi, ktorých mam rád. ");
                         Thread.Sleep(3500);
-                        Console.WriteLine("Volám sa Alica Laštíková bývam v tepličke nad Váhom 15 rokov vo voľnom čase rada pozerám seriály z rôznou tematikov napríklad akčné darama anime sci-fi atd.");
-                        Console.WriteLine(" Milujem mačičky milujem a baví má dizajn a architektúra ale nechcem sa tomu venovať možno uvidím rada trávím čas a so svojimi kamarátmi.");
+                        Console.WriteLine("Volám sa Alica Laštíková bývam v Tepličke nad Váhom 15 rokov vo voľnom čase rada pozerám seriály s rôznou tematikou napríklad akčné, dráma, anime, sci-fi atď.");
+                        Console.WriteLine("Milujem mačičky a baví ma dizajn a architektúra ale nechcem sa tomu venovať možno uvidím rada trávím čas so svojimi kamarátmi.");
                         Thread.Sleep(3500);
                         Console.WriteLine("Teraz sme žiaci na SPŠ IT v KNM.");
                         Thread.Sleep(500);
-                        Console.WriteLine("Tento projekt nám dal veľa námahy a úsilia ale hlavne vela skúsenosti tak hádam sa vám bude páčiť :)");
+                        Console.WriteLine("Tento projekt nám dal veľa námahy a úsilia ale hlavne veľa skúsenosti tak hádam sa vám bude páčiť :)");
                         Thread.Sleep(1000);
                         break;
 
 
                     case "2":
-                        Console.WriteLine("Pravidla hry su jednoduché:");
+                        Console.WriteLine("Pravidlá hry sú jednoduché:");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Hodiš kocko a posunieš sa dane poličko");
+                        Console.WriteLine("Hodíš kockou a posunieš sa na dané políčko.");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Ak na poličku sa nachdza rebrik posunieš sa na poličko kde rebrik konči");
+                        Console.WriteLine("Ak sa na poličku nachádza rebrík posunieš sa na poličko kde rebrík končí.");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Ak sa nachadzaš na poličku kde je hadová hlava");
+                        Console.WriteLine("Ak sa nachádzaš na políčku, kde je hadia hlava.");
                         Thread.Sleep(1000);
-                        Console.WriteLine("tak sa  Console.WriteLin až na hodov chvost ");
+                        Console.WriteLine("Tak sa až na hodov chvost. ");
                         Thread.Sleep(1000);
                         Console.WriteLine("Kdo bode prvý v cieli hrava.");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Ak pravidla neboli jasné tak nam dajte vedieť na naš email :))");
+                        Console.WriteLine("Ak pravidla neboli jasné tak nam dajte vedieť na naš email. :))");
                         Thread.Sleep(1000);
-                        Console.WriteLine("Prajeme vela zabavý a hlavne šťastia");
+                        Console.WriteLine("Prajeme vela zabavý a hlavne šťastia.");
                         Thread.Sleep(1000);
                         break;
 
-                   
+
                     case "3":
-                        Console.WriteLine("Môžete nam napísať ako sa vam hra pači a čo by ste na nej vylepšili na email branislaw3@gmail.com alebo alicalastikova12@gmail.com");
+                        Console.WriteLine("Môžete nám napísať, ako sa vám hra páči a čo by ste na to vylepšili, na email branislaw3@gmail.com alebo alicalastikova12@gmail.com .");
                         Thread.Sleep(100);
                         break;
 
@@ -116,14 +116,12 @@ namespace hadyARebriky
                         {
                             Kocka kocka = new Kocka();
                             Hrac hrac1 = new Hrac("Hráč 1");
-                            Hrac hrac2 = new Hrac("Hráč 2"); // hod kockou, prepocitat poziciu hraca, ci sa hrac nachadza pod hadikom a rebrikom (pomocou LINQ pozerame sa na hodnotu start pomocou listu) )
-                            // prepocitat hodnotu ak sa nachadza
-                            // PREPOCITAT PO KAZDOM HODE CI HRAC NEVYHRAL
+                            Hrac hrac2 = new Hrac("Hráč 2");
                             int aktualnyHrac = 1;
                             while (true)
 
                             {
-                                if (aktualnyHrac == 1) 
+                                if (aktualnyHrac == 1)
                                 {
                                     Console.WriteLine("Hráč 1 hodí kockou:");
                                     Console.ReadLine();
@@ -136,7 +134,7 @@ namespace hadyARebriky
                                     if (had != null)
                                     {
                                         hrac1.Pozicia = had.End;
-                                        Console.WriteLine($"Ooohhh nie aka skoda{hrac1.Meno} klesá z {had.Start} na {had.End} kvôli hadovi! Este sa to da zachranit nevzdavaj sa");
+                                        Console.WriteLine($"Ooohhh nie aka škoda{hrac1.Meno} klesá z {had.Start} na {had.End} kvôli hadovi!");
 
 
                                     }
@@ -150,11 +148,11 @@ namespace hadyARebriky
 
                                     }
 
-                                    Console.WriteLine($"{hrac1.Meno} je teraz na pozícii {hrac1.Pozicia}");
+                                    Console.WriteLine($"{hrac1.Meno} je teraz na pozícií {hrac1.Pozicia}");
 
                                     if (hrac1.Pozicia == 60)
                                     {
-                                        Console.WriteLine($"Blahozelam {hrac1.Meno} vyhral hru! :)");
+                                        Console.WriteLine($"Blahoželam {hrac1.Meno} vyhral hru! :)");
                                         Console.WriteLine("$$\\    $$\\ $$\\     $$\\ $$\\   $$\\ $$$$$$$\\   $$$$$$\\  $$\\              $$$$$$\\  $$$$$$\\ ");
                                         Console.WriteLine("$$ |   $$ |\\$$\\   $$  |$$ |  $$ |$$  __$$\\ $$  __$$\\ $$ |            $$  __$$\\ \\_$$  _|");
                                         Console.WriteLine("$$ |   $$ | \\$$\\ $$  / $$ |  $$ |$$ |  $$ |$$ /  $$ |$$ |            $$ /  \\__|  $$ |  ");
@@ -170,8 +168,8 @@ namespace hadyARebriky
                                     if (hrac1.Pozicia > 60)
                                     {
                                         hrac1.Pozicia -= hod1;
-                                        Console.WriteLine($"Bohuzial {hrac1.Meno} nemoze ist dalej. Hracie pole uz dalej nepokracuje. Hrac sa nachadza {hrac1.Pozicia}  ");
-                                        
+                                        Console.WriteLine($"Bohužial {hrac1.Meno} nemôže ísť ďalej. Hracie pole už ďalej nepokračuje. Hrač sa nachádza {hrac1.Pozicia}  ");
+
                                     }
                                 }
 
@@ -189,7 +187,7 @@ namespace hadyARebriky
                                     if (had1 != null)
                                     {
                                         hrac2.Pozicia = had1.End;
-                                        Console.WriteLine($"Ooohhh nie aka skoda{hrac2.Meno} klesá z {had1.Start} na {had1.End} kvôli hadovi! Este sa to da yachranit nevzdavaj sa");
+                                        Console.WriteLine($"Ooohhh nie aká škoda{hrac2.Meno} klesá z {had1.Start} na {had1.End} kvôli hadovi!");
 
 
                                     }
@@ -197,11 +195,11 @@ namespace hadyARebriky
                                     var rebrik1 = rebriky.FirstOrDefault(r => r.Start == hrac2.Pozicia);
                                     if (rebrik1 != null)
 
-                                    Console.WriteLine($"{hrac2.Meno} je teraz na pozícii {hrac2.Pozicia}");
+                                        Console.WriteLine($"{hrac2.Meno} je teraz na pozícii {hrac2.Pozicia}");
 
                                     if (hrac2.Pozicia == 60)
                                     {
-                                        Console.WriteLine($"Blahozelam {hrac2.Meno} vyhral hru! :)");
+                                        Console.WriteLine($"Blahoželam {hrac2.Meno} vyhral hru! :)");
                                         Console.WriteLine("$$\\    $$\\ $$\\     $$\\ $$\\   $$\\ $$$$$$$\\   $$$$$$\\  $$\\              $$$$$$\\  $$$$$$\\ ");
                                         Console.WriteLine("$$ |   $$ |\\$$\\   $$  |$$ |  $$ |$$  __$$\\ $$  __$$\\ $$ |            $$  __$$\\ \\_$$  _|");
                                         Console.WriteLine("$$ |   $$ | \\$$\\ $$  / $$ |  $$ |$$ |  $$ |$$ /  $$ |$$ |            $$ /  \\__|  $$ |  ");
@@ -218,18 +216,15 @@ namespace hadyARebriky
                                     if (hrac2.Pozicia > 60)
                                     {
                                         hrac2.Pozicia -= hod2;
-                                        Console.WriteLine($"Bohuzial {hrac2.Meno} nemoze ist dalej. Hracie pole uz dalej nepokracuje. Hrac sa nachadza {hrac2.Pozicia}  ");
+                                        Console.WriteLine($"Bohuzial {hrac2.Meno} nemôže ísť ďalej. Hracie pole už ďalej nepokračuje. Hrač sa nachádza {hrac2.Pozicia}  ");
 
                                     }
 
 
                                 }
 
-                            
-                        }   
 
-
-                               
+                            }
 
 
 
@@ -239,13 +234,16 @@ namespace hadyARebriky
 
 
 
-                                
+
+
+
+
                         }
                         break;
 
-                        
-                } 
+
+                }
             }
         }
-    }  
+    }
 }
