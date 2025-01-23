@@ -135,7 +135,6 @@ namespace hadyARebriky
 
                                         Console.WriteLine($"Ooohhh nie aka škoda {hrac1.Meno} klesá z {had.Start} na {had.End} kvôli hadovi!");
 
-                                        Console.WriteLine($"Ooohhh nie aka škoda{hrac1.Meno} klesá z {had.Start} na {had.End} kvôli hadovi!");
 
 
 
@@ -192,7 +191,7 @@ namespace hadyARebriky
  
                                         Console.WriteLine($"Ooohhh nie aká škoda {hrac2.Meno} klesá z {had1.Start} na {had1.End} kvôli hadovi!");
 
-                                        Console.WriteLine($"Ooohhh nie aka skoda{hrac2.Meno} klesá z {had1.Start} na {had1.End} kvôli hadovi!");
+                                       
 
 
 
