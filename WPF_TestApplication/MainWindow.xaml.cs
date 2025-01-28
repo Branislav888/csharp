@@ -16,6 +16,8 @@ namespace WPF_TestApplication
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<string> Allusers = new List<string>();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -28,11 +30,17 @@ namespace WPF_TestApplication
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_ShowName(object sender, RoutedEventArgs e)
         {
-            var inputName =  TextBox.Text;
-            Label_FirstName.Content = inputName;    
-            
+            var newuser = (ComboBox_AccountRole.SelectedItem as string) + " " + TextBox_TextChanged;
+            Label_FirstName.Content = newuser;
+            Allusers.Add(newuser);
+
+            ListBox_AllUsers.Items.Add(newuser);
+            foreach (var user in Allusers)
+            {
+                ListBox_AllUsers.Items.Add(user);    
+            }
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -65,7 +73,7 @@ namespace WPF_TestApplication
         }
         private void CheckBox_DoNotClick(object sender, RoutedEventArgs e)
         {
-            Button_ShowName.IsEnabled = !checkBox_AcceptRules.IsChecked.Value;
+            //Button_ShowName.IsEnabled = !checkBox_AcceptRules.IsChecked.Value;
 
         }
     }
