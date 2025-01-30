@@ -36,6 +36,14 @@ namespace WPF_TestApplication
             Label_FirstName.Content = newuser;
             Allusers.Add(newuser);
 
+            var teachers = Allusers.Where(user => user.StartsWith("Teacher")).ToList();
+            ListBox_AllUsers.Items.Clear();
+            teachers.ForEach(user => ListBox_AllUsers.Items.Add(user));
+
+            var students = Allusers.Where(user => user.StartsWith("Student")).ToList();
+            ListBox_AllUsers.Items.Clear();
+            students.ForEach(user => ListBox_AllUsers.Items.Add(user));
+
             ListBox_AllUsers.Items.Add(newuser);
             foreach (var user in Allusers)
             {
