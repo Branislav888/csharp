@@ -16,7 +16,7 @@ namespace Tic_tac_toe
     /// </summary>
     public partial class MainWindow : Window
     {
-        public char LastPlayer {  get; set; } = '☼';
+        public char LastPlayer { get; set; } = '☼';
 
         public char PlayerOne { get; set; } = '☽';
 
@@ -44,22 +44,146 @@ namespace Tic_tac_toe
             else if (LastPlayer == PlayerTwo)
             {
                 button.Content = PlayerOne;
-                button.Background = new SolidColorBrush(Colors.Red);
+                button.Background = new SolidColorBrush(Colors.Blue);
                 LastPlayer = PlayerOne;
 
 
             }
-           var isWinner = CheckWinner();
+            var Remiza = isFull();
+            var isWinner = CheckWinner();
             if (isWinner)
             {
+                var result = MessageBox.Show(
+                    "Vyhral hráč: " + LastPlayer,
+                    "Vyhral hráč",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Question
+                );
+                
 
-                MessageBox.Show("Vyhral hrac:" + LastPlayer);
+                if (result == MessageBoxResult.Yes)
+                {
+                    Button0.Content = "";
+                    Button1.Content = "";
+                    Button2.Content = "";
+                    Button3.Content = "";
+                    Button4.Content = "";
+                    Button5.Content = "";
+                    Button6.Content = "";
+                    Button7.Content = "";
+                    Button8.Content = "";
+                    Button0.Background = new SolidColorBrush(Colors.White);
+                    Button1.Background = new SolidColorBrush(Colors.White);
+                    Button2.Background = new SolidColorBrush(Colors.White);
+                    Button3.Background = new SolidColorBrush(Colors.White);
+                    Button4.Background = new SolidColorBrush(Colors.White);
+                    Button5.Background = new SolidColorBrush(Colors.White);
+                    Button6.Background = new SolidColorBrush(Colors.White);
+                    Button7.Background = new SolidColorBrush(Colors.White);
+                    Button8.Background = new SolidColorBrush(Colors.White);
+
+                }
+                else
+                {
+                    this.Close();
+                }
+
             }
+            else if (Remiza)
+            {
+                var result = MessageBox.Show("Remiza",
+                 "Remiza",
+                 MessageBoxButton.OKCancel,
+                 MessageBoxImage.Information
+                 );
+                if (result == MessageBoxResult.OK)
+                {
+                    Button0.Content = "";
+                    Button1.Content = "";
+                    Button2.Content = "";
+                    Button3.Content = "";
+                    Button4.Content = "";
+                    Button5.Content = "";
+                    Button6.Content = "";
+                    Button7.Content = "";
+                    Button8.Content = "";
+                    Button0.Background = new SolidColorBrush(Colors.White);
+                    Button1.Background = new SolidColorBrush(Colors.White);
+                    Button2.Background = new SolidColorBrush(Colors.White);
+                    Button3.Background = new SolidColorBrush(Colors.White);
+                    Button4.Background = new SolidColorBrush(Colors.White);
+                    Button5.Background = new SolidColorBrush(Colors.White);
+                    Button6.Background = new SolidColorBrush(Colors.White);
+                    Button7.Background = new SolidColorBrush(Colors.White);
+                    Button8.Background = new SolidColorBrush(Colors.White);
+                }
+                else
+                {
+                    this.Close();
+                }
+
+            }
+
+
         }
-        
+
+       
+
         private void Button0_Click(object sender, RoutedEventArgs e)
         {
-            ProcessClick (sender as Button);
+            ProcessClick(sender as Button);
+        }
+
+        public bool isFull()
+        {
+
+            var button0 = Button1.Content.ToString();
+            var button1 = Button1.Content.ToString();
+            var button2 = Button2.Content.ToString();
+            var button3 = Button3.Content.ToString();
+            var button4 = Button4.Content.ToString();
+            var button5 = Button5.Content.ToString();
+            var button6 = Button6.Content.ToString();
+            var button7 = Button7.Content.ToString();
+            var button8 = Button8.Content.ToString();
+            
+            if (button0 == "")
+            { 
+                return false;
+            }
+            if (button1 == "")
+            {
+                return false;
+            }
+            if (button2 == "")
+            {
+                return false;
+            }
+            if (button3 == "")
+            {
+                return false;
+            }
+            if (button4 == "")
+            {
+                return false;
+            }
+            if (button5 == "")
+            {
+                return false;
+            }
+            if (button6 == "")
+            {
+                return false;
+            }
+            if (button7 == "")
+            {
+                return false;
+            }
+            if (button8 == "")
+            {
+                return false;
+            }
+            return true;
         }
 
         public bool CheckWinner()
@@ -74,32 +198,36 @@ namespace Tic_tac_toe
             var button7 = Button7.Content.ToString();
             var button8 = Button8.Content.ToString();
 
-            // Kontrola rpveho riadku
-            if (button0 == button1 && button1 == button2)
+            // Kontrola prveho riadku
+            if (button0 == button1 && button1 == button2 && button2 != "")
             {
                 return true;
             }
-            if (button3 == button4 && button4 ==button5)
+            if (button3 == button4 && button4 == button5 && button3 != "")
             {
                 return true;
             }
-            if (button6 == button7 && button7 == button8)
+            if (button6 == button7 && button7 == button8 && button6 != "")
             {
                 return true;
             }
-            if (button0 == button3 && button3 == button6)
+            if (button0 == button3 && button3 == button6 && button3 != "")
             {
                 return true;
             }
-            if (button1 == button4 && button4 == button7)
+            if (button1 == button4 && button4 == button7 && button4 != "")
             {
                 return true;
             }
-            if (button0 == button4 && button4 == button8)
+            if (button0 == button4 && button4 == button8 && button4 != "")
             {
                 return true;
             }
-            if (button2 == button4 && button4== button6)
+            if (button2 == button5 && button5 == button8 && button8 != "")
+            {
+                return true;
+            }
+            if (button2 == button4 && button4 == button6 && button4 != "")
             {
                 return true;
             }

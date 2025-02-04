@@ -16,6 +16,7 @@
         <Button x:Name="Button6" Content="" HorizontalAlignment="Left" Margin="249,260,0,0" VerticalAlignment="Top" Click="Button0_Click" Height="75" Width="101" Background="White" BorderBrush="Red" FontSize="48" FontFamily="Arial Black" FontWeight="Bold" Foreground="Red" OpacityMask="White" RenderTransformOrigin="0.327,0.641"/>
         <Button x:Name="Button7" Content="" HorizontalAlignment="Center" Margin="0,260,0,0" VerticalAlignment="Top" Click="Button0_Click" Height="74" Width="100" Background="White" BorderBrush="Red" FontSize="48" FontFamily="Arial Black" FontWeight="Bold" Foreground="Red" OpacityMask="White"/>
         <Button x:Name="Button8" Content="" HorizontalAlignment="Left" Margin="438,259,0,0" VerticalAlignment="Top" Click="Button0_Click" Height="75" Width="100" Background="White" BorderBrush="Red" FontSize="48" FontFamily="Arial Black" FontWeight="Bold" Foreground="Red" OpacityMask="White"/>
+        <Label Content="Tic-tac-toe" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" Height="61" Width="252" FontSize="36" FontWeight="Bold" FontFamily="Bahnschrift"/>
 
     </Grid>
 </Window>
