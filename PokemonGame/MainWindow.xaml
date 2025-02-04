@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PokemonGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="940" Width="1276">
+    <Grid RenderTransformOrigin="0.488,0.471" Margin="10,0,0,-6">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.153"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Label Content="pokemon game" HorizontalAlignment="Left" Margin="445,49,0,0" VerticalAlignment="Top" Height="71" Width="324" FontSize="48" FontFamily="Bradley Hand ITC" FontWeight="Bold" Background="White" Foreground="#FFE4D25C"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="379,217,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Margin="740,294,140,282" Source="/Image1.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="254,512,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="287,671,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Margin="125,315,793,273" Source="/Image3.png" Stretch="Fill"/>
 
     </Grid>
 </Window>
