@@ -35,15 +35,17 @@ namespace Tic_tac_toe
 
             if (LastPlayer == PlayerOne)
             {
-                    button.Content = PlayerTwo;
-                    LastPlayer = PlayerTwo;
+                button.Content = PlayerTwo;
+                button.Background = new SolidColorBrush(Colors.Green);
+                LastPlayer = PlayerTwo;
 
             }
 
             else if (LastPlayer == PlayerTwo)
             {
-                    button.Content = PlayerOne;
-                    LastPlayer = PlayerOne;
+                button.Content = PlayerOne;
+                button.Background = new SolidColorBrush(Colors.Red);
+                LastPlayer = PlayerOne;
 
 
             }
@@ -73,11 +75,31 @@ namespace Tic_tac_toe
             var button8 = Button8.Content.ToString();
 
             // Kontrola rpveho riadku
-            if (button0 == button1 && button0 == button2)
+            if (button0 == button1 && button1 == button2)
             {
                 return true;
             }
-            if (button3 == button4 && button3 ==button5)
+            if (button3 == button4 && button4 ==button5)
+            {
+                return true;
+            }
+            if (button6 == button7 && button7 == button8)
+            {
+                return true;
+            }
+            if (button0 == button3 && button3 == button6)
+            {
+                return true;
+            }
+            if (button1 == button4 && button4 == button7)
+            {
+                return true;
+            }
+            if (button0 == button4 && button4 == button8)
+            {
+                return true;
+            }
+            if (button2 == button4 && button4== button6)
             {
                 return true;
             }
