@@ -8,14 +8,21 @@
         Title="Window_PokemonBattle" Height="450" Width="800">
     <Grid>
         <ProgressBar Name="ProgressBar_Pokemon1_HP" HorizontalAlignment="Left" Height="23" Margin="54,78,0,0" VerticalAlignment="Top" Width="211" Background="Gainsboro"/>
-        <Image Margin="54,122,454,122" Source="Pikachunew.png" Stretch="Fill"/>
-        <Image Margin="504,73,79,146" Source="Charizardnew.png" Stretch="Fill"/>
+        <Image Margin="14,122,494,122" Source="Pikachunew.png" Stretch="Fill"/>
+        <Image Margin="528,104,55,115" Source="Charizardnew.png" Stretch="Fill"/>
         <Label Name="Label_Pokemon1_HP" Content="X/X" HorizontalContentAlignment="Left" Margin="54,31,535,0" VerticalAlignment="Top" FontSize="24" Width="211" RenderTransformOrigin="-0.301,0.562"/>
-        <ProgressBar Name="ProgressBar_Pokemon2_HP" HorizontalAlignment="Left" Height="26" Margin="504,47,0,0" VerticalAlignment="Top" Width="236"/>
-        <Label Name="Label_Pokemon2_HP" Content="X/X"  HorizontalAlignment="Left" Margin="504,-1,0,0" VerticalAlignment="Top" Height="43" Width="58" FontSize="24"/>
-        <Button Content="Ligh Attack" HorizontalAlignment="Left" Margin="54,368,0,0" VerticalAlignment="Top" Height="41" Width="82" Background="#FF8BE859" Click="Button_Click"/>
-        <Button Content="Medium Attack" HorizontalAlignment="Left" Margin="160,368,0,0" VerticalAlignment="Top" Height="40" Width="68" RenderTransformOrigin="-0.275,0.451" Background="#FFEAA764" Click="Button_Click_1"/>
-        <Button Content="Hard Attack" HorizontalAlignment="Left" Margin="260,368,0,0" VerticalAlignment="Top" Height="40" Width="68" Background="#FFE24444" Click="Button_Click_2"/>
-
+        <ProgressBar Name="ProgressBar_Pokemon2_HP" HorizontalAlignment="Left" Height="26" Margin="470,73,0,0" VerticalAlignment="Top" Width="236"/>
+        <Label Name="Label_Pokemon2_HP" Content="X/X"  HorizontalAlignment="Left" Margin="470,21,0,0" VerticalAlignment="Top" Height="43" Width="236" FontSize="24"/>
+        <Button Name="Button_LA" Content="Ligh Attack" HorizontalAlignment="Left" Margin="54,312,0,0" VerticalAlignment="Top" Height="41" Width="82" Background="#FF8BE859" Click="Button_Click"/>
+        <Button Name="Button_MA" Content="Medium Attack" HorizontalAlignment="Left" Margin="148,312,0,0" VerticalAlignment="Top" Height="41" Width="68" RenderTransformOrigin="-0.275,0.451" Background="#FFEAA764" Click="Button_Click_1"/>
+        <Button Name="Button_HA" Content="Hard Attack" HorizontalAlignment="Left" Margin="229,312,0,0" VerticalAlignment="Top" Height="40" Width="82" Background="#FFE24444" Click="Button_Click_2"/>
+        <Button Name="Button_Heal"Content="Heal" HorizontalAlignment="Left" Margin="54,370,0,0" VerticalAlignment="Top" Height="40" Width="257" Background="#FF79AAE2" BorderBrush="White" Foreground="#FFFF0C0C" Click="Button_Click_3"/>
+        <ListView x:Name="ListView_FightLogger" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="255,140,301,151">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

@@ -45,17 +45,21 @@ namespace PokemonGame
             }
             return true;
         }
+        public bool TakeHeal(int heal)
+        {
+            Health += heal;
+            if (Health >= 100)
+            {
+                Health = 100;
+                return false;
+            }
+            return true;
+        }
 
         public int Heal()
         {
             Random rnd = new Random();
-            int healValue = rnd.Next(20, 71);
-            Health += healValue;
-            if (Health > 100)
-            {
-                Health = 100;
-            }
-            return healValue;
+            return rnd.Next(20, 71);
         }
     }
 }
