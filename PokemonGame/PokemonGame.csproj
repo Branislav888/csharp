@@ -10,17 +10,15 @@
 
   <ItemGroup>
     <None Remove="Charizardnew.png" />
+    <None Remove="Images\pikemon go mapa battle.png" />
     <None Remove="Pikachunew.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Images\" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Charizardnew.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\pikemon go mapa battle.png" />
     <Resource Include="Pikachunew.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

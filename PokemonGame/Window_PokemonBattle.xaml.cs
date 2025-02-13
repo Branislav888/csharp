@@ -20,11 +20,13 @@ namespace PokemonGame
     /// </summary>
     public partial class Window_PokemonBattle : Window
     {
-        public GameEngine gameEngine { get; set; } = new GameEngine();
+        public GameEngine GameEngine { get; set; }
         public List<string> FightLogger { get; set; } = new List<string>();
-        public Window_PokemonBattle()
+        public Window_PokemonBattle(GameEngine gameEngine)
         {
             InitializeComponent();
+
+            GameEngine = gameEngine;
 
             RefreshElements();
 
@@ -32,11 +34,11 @@ namespace PokemonGame
         private void RefreshElements()
         {
             //Zobrazenie spravneho poctu zivotov
-            ProgressBar_Pokemon1_HP.Value = gameEngine.FirstPokemon.Health;
-            Label_Pokemon1_HP.Content = $"{gameEngine.FirstPokemon.Health}/ 100";
+            ProgressBar_Pokemon1_HP.Value = GameEngine.FirstPokemon.Health;
+            Label_Pokemon1_HP.Content = $"{GameEngine.FirstPokemon.Health}/ {GameEngine.FirstPokemon.MaxHealt}";
 
-            ProgressBar_Pokemon2_HP.Value = gameEngine.SecondPokemon.Health;
-            Label_Pokemon2_HP.Content = $"{gameEngine.SecondPokemon.Health}/ 100";
+            ProgressBar_Pokemon2_HP.Value = GameEngine.SecondPokemon.Health;
+            Label_Pokemon2_HP.Content = $"{GameEngine.SecondPokemon.Health}/ {GameEngine.SecondPokemon.MaxHealt}";
 
             ListView_FightLogger.Items.Clear();
             foreach (var log in FightLogger)
@@ -44,18 +46,18 @@ namespace PokemonGame
                 ListView_FightLogger.Items.Add(log);
             }
 
-            if (gameEngine.FirstPokemon.Health <= 0)
+            if (GameEngine.FirstPokemon.Health <= 0)
             {
                 Label_Pokemon1_HP.Content = "LOSER!";
                 Label_Pokemon2_HP.Content = "WINNER!";
             }
 
-            if (gameEngine.SecondPokemon.Health <= 0)
+            if (GameEngine.SecondPokemon.Health <= 0)
             {    
                 Label_Pokemon1_HP.Content = "WINNER!";
                 Label_Pokemon2_HP.Content = "LOSER!";
             }
-            if (gameEngine.SecondPokemon.Health <= 0 && gameEngine.FirstPokemon.Health <= 0)
+            if (GameEngine.SecondPokemon.Health <= 0 && GameEngine.FirstPokemon.Health <= 0)
             {
                 Button_LA.IsEnabled = false;
                 Button_MA.IsEnabled = false;
@@ -71,36 +73,36 @@ namespace PokemonGame
 
             if (value < 10)
             {
-                var damage = gameEngine.FirstPokemon.Attack1();
-                var pokemonSurvived = gameEngine.FirstPokemon.TakeDamage(damage);
-                FightLogger.Add($"{gameEngine.SecondPokemon.Name} used Light Attack and dealt {damage} damage to {gameEngine.FirstPokemon.Name}");
+                var damage = GameEngine.FirstPokemon.Attack1();
+                var pokemonSurvived = GameEngine.FirstPokemon.TakeDamage(damage);
+                FightLogger.Add($"{GameEngine.SecondPokemon.Name} used Light Attack and dealt {damage} damage to {GameEngine.FirstPokemon.Name}");
 
             }
             else if (value >= 10 &&  value < 30)
             {
-                var damage = gameEngine.SecondPokemon.Attack2();
-                var pokemonSurvived = gameEngine.FirstPokemon.TakeDamage(damage);
-                FightLogger.Add($"{gameEngine.SecondPokemon.Name} used Medium Attack and dealt {damage} damage to {gameEngine.FirstPokemon.Name}");
+                var damage = GameEngine.SecondPokemon.Attack2();
+                var pokemonSurvived = GameEngine.FirstPokemon.TakeDamage(damage);
+                FightLogger.Add($"{GameEngine.SecondPokemon.Name} used Medium Attack and dealt {damage} damage to {GameEngine.FirstPokemon.Name}");
             }
             else if (value >= 30 && value < 80)
             {
-                var damage = gameEngine.SecondPokemon.Attack3();
-                var pokemonSurvived = gameEngine.FirstPokemon.TakeDamage(damage);
-                FightLogger.Add($"{gameEngine.SecondPokemon.Name} used High Attack and dealt {damage} damage to {gameEngine.FirstPokemon.Name}");
+                var damage = GameEngine.SecondPokemon.Attack3();
+                var pokemonSurvived = GameEngine.FirstPokemon.TakeDamage(damage);
+                FightLogger.Add($"{GameEngine.SecondPokemon.Name} used High Attack and dealt {damage} damage to {GameEngine.FirstPokemon.Name}");
             }
             else if (value >= 80)
             {
-                var heal = gameEngine.SecondPokemon.Heal();
-                FightLogger.Add($"{gameEngine.SecondPokemon.Name} used Heal.");
+                var heal = GameEngine.SecondPokemon.Heal();
+                FightLogger.Add($"{GameEngine.SecondPokemon.Name} used Heal.");
             }
 
         }
         //Light Attack
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var damege = gameEngine.FirstPokemon.Attack1();
-            var pokemonSurvived = gameEngine.SecondPokemon.TakeDamage(damege);
-            FightLogger.Add($"{gameEngine.FirstPokemon.Name} used Light Attack and dealt {damege} damage to {gameEngine.SecondPokemon.Name}");
+            var damege = GameEngine.FirstPokemon.Attack1();
+            var pokemonSurvived = GameEngine.SecondPokemon.TakeDamage(damege);
+            FightLogger.Add($"{GameEngine.FirstPokemon.Name} used Light Attack and dealt {damege} damage to {GameEngine.SecondPokemon.Name}");
 
             if (pokemonSurvived)
             {
@@ -113,9 +115,9 @@ namespace PokemonGame
         //Medium Attack
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var damege = gameEngine.FirstPokemon.Attack1();
-            var pokemonSurvived = gameEngine.SecondPokemon.TakeDamage(damege);
-            FightLogger.Add($"{gameEngine.FirstPokemon.Name} used Medium Attack and dealt {damege} damage to {gameEngine.SecondPokemon.Name}");
+            var damege = GameEngine.FirstPokemon.Attack1();
+            var pokemonSurvived = GameEngine.SecondPokemon.TakeDamage(damege);
+            FightLogger.Add($"{GameEngine.FirstPokemon.Name} used Medium Attack and dealt {damege} damage to {GameEngine.SecondPokemon.Name}");
 
             if (pokemonSurvived)
             {
@@ -128,9 +130,9 @@ namespace PokemonGame
         //Hard Attack
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            var damege = gameEngine.FirstPokemon.Attack1();
-            var pokemonSurvived = gameEngine.SecondPokemon.TakeDamage(damege);
-            FightLogger.Add($"{gameEngine.FirstPokemon.Name} used High Attack and dealt {damege} damage to {gameEngine.SecondPokemon.Name}");
+            var damege = GameEngine.FirstPokemon.Attack1();
+            var pokemonSurvived = GameEngine.SecondPokemon.TakeDamage(damege);
+            FightLogger.Add($"{GameEngine.FirstPokemon.Name} used High Attack and dealt {damege} damage to {GameEngine.SecondPokemon.Name}");
 
             if (pokemonSurvived)
             {
@@ -143,9 +145,9 @@ namespace PokemonGame
         //Heal
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            var heal = gameEngine.FirstPokemon.Heal();
-            gameEngine.FirstPokemon.TakeHeal(heal);
-            FightLogger.Add($"{gameEngine.FirstPokemon.Name} used Heal and was healt {heal}.");
+            var heal = GameEngine.FirstPokemon.Heal();
+            GameEngine.FirstPokemon.TakeHeal(heal);
+            FightLogger.Add($"{GameEngine.FirstPokemon.Name} used Heal and was healt {heal}.");
 
            
             RefreshElements();
