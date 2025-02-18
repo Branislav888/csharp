@@ -57,7 +57,7 @@ namespace PokemonGame
                 Label_Pokemon1_HP.Content = "WINNER!";
                 Label_Pokemon2_HP.Content = "LOSER!";
             }
-            if (GameEngine.SecondPokemon.Health <= 0 && GameEngine.FirstPokemon.Health <= 0)
+            if (GameEngine.SecondPokemon.Health <= 0 || GameEngine.FirstPokemon.Health <= 0)
             {
                 Button_LA.IsEnabled = false;
                 Button_MA.IsEnabled = false;
